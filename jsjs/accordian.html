@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <title>아코디언메뉴</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        ul{
+            list-style: none;
+        }
+        #wrap{
+            width:600px;
+            border:1px solid #f06;
+            box-sizing: border-box;
+            margin: 40px auto;
+        }
+        
+        #wrap ul li.on span{
+            background-color: #85f;
+        }
+        
+        #wrap span{
+            display: block;
+            background-color: #f06;
+            height:30px;
+            color:#fff;
+            line-height: 30px;
+            border-bottom: 1px solid #fff;
+            cursor:pointer;
+        }
+        #wrap li:last-child span{
+            border-bottom:0;
+        }
+        #wrap .txt{
+            height:100px;
+            padding:10px;
+            box-sizing: border-box;
+            display: none;
+        }
+        #wrap li:nth-child(1) .txt{
+            display: block;
+        }
+    </style>
+    </head>
+    <body>
+   <div id="wrap">
+    <ul>
+    <li class="on"><span>Menu1</span>
+        <div class="txt">
+        컨텐츠 영역1
+        </div>    
+    </li>   
+        
+    <li><span>Menu1</span>
+      <div class="txt">
+        컨텐츠 영역2
+        </div>      
+    </li>
+        
+    <li><span>Menu1</span>
+        <div class="txt">
+        컨텐츠 영역3
+        </div>    
+        </li>  
+        
+    <li><span>Menu1</span>
+        <div class="txt">
+        컨텐츠 영역4
+        </div>    
+        </li>   
+    </ul>    
+    </div><!--wrap-->     
+        
+        
+        
+        
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+    $('li span').on('click',function(){
+       $(this).siblings('.txt').slideDown(); 
+       $(this).parent().siblings().find('.txt').slideUp();
+    });  
+    
+    $('li span').on('click',function(){
+       $(this).parent().addClass('on').siblings().removeClass('on'); 
+    });
+        
+        
+    </script>
+    </body>
+</html>

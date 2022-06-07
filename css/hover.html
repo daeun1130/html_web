@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko"><!--이문서는 한국어로 만들어져 있다-->
+<head>
+    <title>마우스오버</title>
+    <style>
+        a{width:90px;
+        height:42px;
+            text-transform:uppercase;
+        background-color:#2eba00;
+        color:#fff;
+        display:block;
+        text-align:center;
+        text-decoration: none;
+          line-height:42px;
+            border-radius: 5px;
+            transition: all 0.6s;
+            display:block;
+            text-decoration: none;
+            text-align: center;
+            /*transition:변화를 지연시키는 효과
+            0.6s시간0.6초
+            */
+        }
+        .btn1:hover{background-color: aquamarine;
+        color:#333;
+        text-decoration: underline;
+        border-radius: 45px;}
+    
+        .btn2{width:120px;
+        height:36px;
+        font-size:14px;
+        color:coral;
+        background-color: lightpink;
+        text-decoration:none;
+        line-height: 36px;
+        border-radius:5px;
+        margin-top: 30px;
+        border:4px solid lightpink;}
+        
+        .btn2:hover{background: none;
+            color:lightpink;
+            
+        }
+        
+        .btn2:active{
+            background-color: deeppink;
+        }
+        
+        .box1{
+            width:300px;
+            height:80px;
+            text-align:center;
+            background-color: darkviolet;
+            color:#eee;
+            margin: 0 auto;
+            padding-top:35px;
+            cursor:pointer;
+            user-select: none;
+        }
+        
+        .box1:hover{
+            background-color: dodgerblue;
+        }
+        .box1::selection{background-color: deeppink;}
+        /*box1*/
+        
+        .box2{
+            width:500px;
+            height: 500px;
+            background-color: #000;
+            margin:20px auto;
+        }
+        .box2 .boxin{
+            width:500px;
+            height: 0;
+            border-color: #ccc;
+            transition: all 0.6s;
+            color: #ccc;
+            overflow: hidden;
+        }
+        
+        .box2:hover .boxin{
+            height: 500px;
+        }/*box2*/
+        
+        .box3{width:120px;
+        height:50px;
+        background-color: red;
+            position:relative;
+        }
+        
+        .box3 ul{padding:0;
+        height:0;
+        overflow:hidden;
+            position: absolute;
+            top:30px;
+            left:0;
+            transition: all 0.8s;
+        }
+        
+        .box3:hover ul{
+            height: 250px;
+        }
+        
+        .box3 ul li{height: 50px;
+        background-color: #ccc;
+        width:120px;}
+        
+    </style>
+    </head>
+    <body>
+    <a href="#" class="btn1">CLICK</a>
+    <a href="#" class="btn2">Hello</a>
+    
+    <div class="box1">
+        
+        동해물과 백두산이 마르고 닳도록
+        하느님이 보우하사 우리나라 만세
+        
+        </div><!--box-->
+        <div class="box2">
+        
+        <div class="boxin">
+        
+        <ul>
+        <li>리스트1</li>
+            <li>리스트2</li>
+            <li>리스트3</li>
+            <li>리스트4</li>
+            <li>리스트5</li>
+           
+        </ul>
+        </div>
+        </div>
+        
+        
+        <div class="box3">
+            
+        <ul>
+            <li>text1</li>
+            <li>text2</li>
+            <li>text3</li>
+            <li>text4</li>
+            
+            
+            </ul>
+       
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+    </body>
+</html>

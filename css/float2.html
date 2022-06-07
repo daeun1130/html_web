@@ -1,0 +1,99 @@
+<!doctype hrml>
+<html>
+<head>
+    <title>플로트2</title>
+    <style>
+    
+    
+        .container{
+            width:800px;
+            background-color:#ccc;
+            margin:0 auto;
+            
+        }
+        /*float속성은 원래 문단 내 이미지 배열을 위한 속성으로,
+        레이아웃 가로정렬을 위한 속성은 아니다
+        그렇지만 어떤 기계던 어떤 브라우저에서던 동일한 웹(을 만드는 기술:
+        크로스브라우징 웹표준코딩)을 보기 위해서
+        우리는 float속성을 사용해서 가로정렬을 한다
+        
+        그렇기 때문에 float속성을 사용하면 부작용이 일어날 수 밖에 없다.
+        부작용:안의 속성들이 기존의 박스모델 구조에서 탈출해서 둥둥 떠올라버리 는 현상
+        
+        float로 인한 부작용을 해소하는 방법:
+        float:laft는 기본적으로 가로정렬할 모든 속성에게 줘야된다
+        float:left로 가로정렬한 태그들의"바로 위의 부모태그
+        "바로 위의 부모태그"
+        태그이름:after{
+        content:'';
+            clear:both;
+        display:block;}이 공식을 준다.*/
+        
+        .container:after{
+            content:'';
+            clear:both;
+            display:block;
+        }
+        
+        .box{width:150px;
+        height: 150px;
+        background-color: #f06;
+        border: 1px solid #000;
+            float:left;
+       }
+        
+        .space{width:600px;
+        height:300px;
+        background-color: blue;
+            border:30px solid #000;
+        margin:0 auto;}
+    
+    
+        ul{background-color:black;
+            list-style:none;
+            padding:0;/*ul이 원래 가지고 있던
+            pdding값을 없애줌*/
+            
+            
+        }
+        
+        ul:after{
+            content:'';
+            clear:both;
+            display:block;}
+        
+        li{background-color: #ccc;
+        width: 20px;
+        height:20px;
+        border-radius:50%;
+        float:left;
+        margin-right:20px;}
+    </style>
+    </head>
+    
+    
+    <body>
+    
+    
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+        </div>
+    
+        <div class="space"></div>
+        
+        
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    
+    
+    
+    </body>
+</html>

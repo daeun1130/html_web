@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <title>A M O R E</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+
+        
+function pc(){
+$('nav>ul>li').on('mouseover',function(){
+
+$(this).find('.sub').stop().fadeIn();
+    
+}).on('mouseout',function(){
+    
+    $(this).find('.sub').stop().fadeOut();
+
+})
+}//func. pc        
+        
+        
+        
+        
+        
+//이하의 제이쿼리(어제 제작한 것들) 모바일 전용! 모바일환경에서만 실행되도록 해봅시다(320px이상, 1200px미만)       
+var wt = $(window).width();    
+ if(wt >=320 && wt<1200){
+
+     mo();
+ }else if(wt>=1200){
+     pc();
+     
+ }
+        if (wt>=768 && wt<1200){
+     
+  var bx_ht = $('.row2 .box').height();
+
+$('.row2 .box_a').height(bx_ht);
+        }
+        
+$(window).on('resize',function(){
+var wt = $(window).width();    
+$('nav>ul>li').off();
+$('.a').off();
+$('.sub').hide();
+
+ if(wt >=320 && wt<1200){
+     mo();
+ }else if(wt>=1200){
+
+     pc();
+ }
+ if (wt>=768){
+     
+  var bx_ht = $('.row2 .box').height();
+
+$('.row2 .box_a').height(bx_ht);   
+ }else{
+     $('.row2 .box_a').height('auto');
+ }
+
+});//resize
+        
+
+        
+function mo(){
+        
+$('.a').on('click',function(){
+        
+$(this).siblings('.sub').slideToggle();
+ $(this).parent().siblings().find('.sub').slideUp();
+        
+
+    $(this).toggleClass('on').parent().siblings().find('a').removeClass('on');
+        
+        
+    });//aside내부 메뉴
+        
+//.all_btn누르면 aside가 튀어나오고, 내부의 close누르면 다시 사라지기
+    $('.all_btn').on('click',function(){
+        
+        $('aside').stop().animate({
+            'left' : 0
+        })
+        
+        
+    });
+    
+$('aside .close').on('click',function(){
+    
+    $('aside').stop().animate({
+        'left' : '-100%'
+    });
+        
+        
+    });
+        
+$('.s_btn').on('click',function(){
+    
+     $('.sns').toggleClass('on');
+    
+})}//func. mo
+        
+    $('.top').on('click',function(e){
+        e.preventDefault();
+        $('html,body').animate({'scrollTop':0},1500);
+    })//top
+       
+        
+    $('.f_lang').on('click',function(){
+        $(this).toggleClass('on')
+    })//f_lang
+    $('.l_pop a').on('click',function(e){
+        e.preventDefault();
+        var a=$(this).text();
+        $('.select').text(a);
+    })//l_pop a
+        
+    })//오프닝구문
+    
+    </script>
+    
+    
+</head>
+<body>
+<div id="wrap">
+<header>
+ <div class="h_wrap">
+   <h1><a href="#">
+    <img src="images/logo.png" alt="아모레퍼시픽">
+    </a></h1>
+    
+    <button class="all_btn"><img src="images/btn_aside_open.png" alt="메뉴오픈">
+    </button><!--전체메뉴열기-->
+    
+    <aside>
+    <button class="close">
+    <img src="images/btn_aside_close.png" alt="메뉴닫기">    
+    </button><!--close-->
+    
+    <div class="util">
+        <ul>
+            <li>
+            <a href="#">STORE</a></li>
+            <li><a href="#">FACEBOOK</a></li>
+        <li class="srch">
+            <a href="#">SEARCH</a>
+        <form>
+        <input type="text">
+        <button><img src="images/btn_util_search.png"></button>
+        </form>
+        </li>
+        </ul>
+    </div><!--.util-->
+    
+    <nav class="gnb">
+    <ul>
+    <li><a href="#" class="a">AT THIS MOMENT</a>
+    <ul class="sub s1">
+    <li><a href="#">Best Seller</a></li>
+    <li><a href="#">Hightlight</a></li>
+    </ul>    
+    </li><!--첫번째 li-->  
+    
+    <li>
+    <a href="#" class="a">HERITAGE OF AMOREPACIFIC</a>
+    <ul class="sub s2">
+        <li><a href="#">Origin</a></li> 
+        <li><a href="#">Botanical Science</a></li>  
+        <li><a href="#">Film & Art book</a></li>
+        <li><a href="#">History</a></li>
+        <li><a href="#">Spa</a></li>
+    </ul>    
+    </li><!--두번째 li-->
+        
+    <li>
+    <a href="#" class="a">PRODUCT</a> 
+    <ul class="sub s3">
+        <li><a href="#">Skin Care</a></li>    
+        <li><a href="#">Make Up</a></li>
+        
+        <li><a href="#">Product Advisor</a></li>    
+    </ul><!--s3-->
+    </li><!--세번째 li-->
+        
+    <li>
+    <a href="#" class="a">MEDIA GALLERY</a>
+        <ul class="sub s4">
+        <li><a href="#">Video Clips</a></li>
+        <li><a href="#">Prints</a></li>
+        </ul>
+    </li><!--네번째 li-->
+        
+    </ul>    
+    </nav>
+        
+    </aside><!--시맨틱태그! 왼쪽이나 오른쪽의 메뉴, 위젯을 담는 레이아웃용 태그-->
+    
+    <button class="s_btn">
+    <img src="images/btn_sns_open.png">
+    </button>
+     
+    <div class="sns">
+    <a href="#"><img src="images/ico_facebook.png"></a> 
+    <a href="#"><img src="images/ico_twitter.png"></a> 
+    </div><!--sns-->
+     
+ </div><!--h_wrap-->
+</header><!--header-->
+
+<div class="slide">
+<div class="s_wrap">
+<div class="simg simg1">
+    <img src="images/img_visual_1.jpg" class="pc">
+    <img src="images/img_visual_1_m.jpg" class="mo">
+    
+    <div class="txt">
+    시간을 압도하는<br>단 하나의 안티에이징
+    <br>TIME RESPONSE Skin Renewal Creme<br>AMOREPACIFIC의 독자적인 녹차 콜렉션이<br>무너진 피부 시간을 되돌리다.
+        
+    <a href="#">
+       VIEW DETAILS
+        
+        <span class="bg">
+        <b>VIEW DETAILS</b>
+        </span>
+    </a><!--디테일버튼-->
+    </div>
+    
+</div><!--첫번째 슬라이드-->
+    
+<div class="simg simg2">
+<img src="images/img_visual_2.jpg" class="pc">
+<img src="images/img_visual_2_m.jpg" class="mo">
+
+<div class="txt">
+완벽한 꿈의 피부를 완성하다<br>
+안티에이징 컬러 컨트롤 쿠션<br>
+
+ANTI-AGING COLOR CONTROL CUSHION SPF 50+/PA+++<br>
+
+바르는 순간 빈틈없이 탄탄하게 빛나는 피부결로 케어해주는<br>
+아모레퍼시픽 안티에이징 쿠션<br>
+<a href="#">VIEW DETAILS</a>
+</div>
+</div><!--두번째 슬라이드-->
+    
+<div class="simg simg3">
+<img src="images/img_visual_3.jpg" class="pc">    
+<img src="images/img_visual_3_m.jpg" class="mo">    
+
+<div class="txt">
+깊이 잠든 피부 속<br>
+숨겨진 수분을 찾다<br>
+
+MOISTURE BOUND Hydration Ampoule<br>
+
+피부의 수분 잠재력을 깨워, 수분감 넘치는 건강한 피부로<br>
+케어해주는 1달 집중 하이드레이팅 앰플    
+    
+<a href="#">VIEW DETAILS</a>
+</div>
+    
+</div>
+</div><!--s_wrap-->
+</div><!--slide-->
+
+<div class="con">
+<div class="row1">
+ <div class="box">
+    <img src="images/img_main_film.jpg" class="pc">
+    <img src="images/img_main_film_m.jpg" class="mo">
+     <div class="txt">
+     BRAND FILM<br>
+     TIMELESS BEAUTY, AMOREPACIFIC
+      <a href="#">PLAY FILM</a>
+     </div><!--txt-->
+ </div><!--첫번째 박스-->
+    
+<div class="box">
+<img src="images/img_main_artbook.jpg" class="pc">    
+<img src="images/img_main_artbook_m.jpg" class="mo">
+    
+<div class="txt">
+    ART BOOK<br>
+    FLAGSHIP BRAND EXPERIENCE
+    <a href="#">VIEW DETAILS</a>
+</div><!--txt-->
+</div><!--두번째 박스-->
+</div><!--row1-->
+<div class="row2">
+    <div class ="row2_in">
+        <div class="box">
+        <img src="images/img_news_1.jpg">
+        <div class="txt">
+            <p>70주년 기념
+            <span class="pc">
+            Asian Beauty Green Tea Collection 출시    
+            </span><!--pc-->
+            <a href="#">VIEW DETAILS</a>
+            </p>
+        </div><!--txt-->
+        </div><!--box-->
+        
+        <div class="box_a">
+        <img src="images/img_news_2.jpg" class="pc">
+        <img src="images/img_news_2_m.jpg" class="mo">
+            
+        <div class="txt">
+        브랜드 웹사이트 리뉴얼
+        <span class="pc">새로운 공간을 만나보세요.</span>
+        <a href="#">VIEW DETAIL</a>
+        </div>
+        </div><!--box_a 두번째 box-->
+        
+        <div class="box box_b">
+        <img src="images/img_news_3.jpg">
+            
+        <div class="txt">
+            <p>
+            뉴욕 BloomingDale's입점
+            <span class="pc">세계인을 감동시킨 타임리스 뷰티</span>
+            <a href="#">VIEW DETAILS</a>
+            </p>    
+        </div>
+        </div><!--box box_b 세번째box-->
+        
+        
+    </div><!--row2_in-->
+</div><!--row2-->
+    <div class="row3">
+    <img src="images/img_advisor.jpg">
+        <div class="txt">
+        PRODUCT ADVISOR<br>
+            <span class="pc">
+                소중한 당신의 피부를 진단하고<br>그에 맞는
+                AMOREPACIFIC 제품을 제안합니다.
+            </span>
+            <a href="#">START</a>
+        </div>
+    </div><!--row3-->
+</div><!--con-->
+    
+    <footer>
+    <div class="f_wrap">
+        <ul class="f_menu">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">서비스이용약관</a></li>
+        <li><a href="#">개인정보취급방침</a></li>
+        <li><a href="#">영상정보처리방침</a></li>
+        <li><a href="#">BEAUTY POINT</a></li>
+        <li><a href="#">SITE MAP</a></li>
+        </ul><!--f_menu-->
+        
+        <div class="f_txt">
+        <p>고객상담팀(수신자요금부담) 080-028-5454</p>
+        <p>월~목 : AM 09:00 ~ PM:09:00, 금 : AM 09:00 ~ PM 05:30</p>
+        </div>
+        
+        <div class="f_box">
+        <div class="f_lang">
+        <span class="select">한국</span>
+            
+        <div class="l_pop">
+        <a href="#">일본</a>    
+        <a href="#">중국</a>    
+        <a href="#">영어</a>    
+        <a href="#">프랑스</a>    
+        <a href="#">러시아</a>    
+        </div><!--클릭하면 튀어나올 팝업-->
+        </div><!--f_lang-->
+        
+        <div class="f_mark">
+        <img src="images/img_accessibility.png">
+        </div><!--f_mark-->
+        
+        <div class="copyright">
+        ©2015 AMOREPACIFIC. All Rights Reserved.
+        </div><!--copyright-->
+        </div><!--f_box-->
+    </div><!--f_wrap-->
+    </footer>
+    
+    
+    <div class="top pc">
+    <a href="#">
+    <img src="images/btn_top.png">    
+    </a>
+    </div><!--top pc-->
+    
+    
+    
+    
+</div><!--#wrap-->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

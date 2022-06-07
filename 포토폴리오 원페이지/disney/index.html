@@ -1,0 +1,731 @@
+<!doctype.html>
+<html lang="ko">
+	
+<head>
+<title>DISNEY</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">	
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jquery.bxslider.css">
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/jquery.bxslider.js"></script>
+</head>
+	
+<body>
+<!--header-->
+
+    <header>
+
+    <div class="h_top">
+
+       <div class="util">
+
+      
+
+           
+
+        <ul>
+
+         <li><a href="#">中文</a></li>  
+
+         <li><a href="#">ENGLISH</a></li>  
+
+         <li><a href="#">한국어</a></li>  
+
+         </ul>
+
+           
+
+           
+
+         <p>
+
+        <a href="#">Welcome to DISNEY</a>   
+
+        </p>
+
+        </div><!--util-->    
+
+    </div><!--h_top-->
+
+        
+
+        <div class="h_mid">
+
+        <h1><a href="#">
+
+            <img src="images/h_logo.png">
+
+            </a></h1>
+
+        
+
+        
+
+        <ul class="gnb">
+
+        <li><a href="#">HOME</a></li>    
+
+        <li><a href="#">MOVIE</a></li>    
+
+        <li><a href="#">MOBILE</a></li>    
+
+        <li><a href="#">TV</a></li>    
+
+        <li><a href="#">SHOP</a></li>    
+
+        <li><a href="#">NEWS</a></li>    
+
+        </ul>
+
+        
+
+        
+
+        </div><!--h_mid-->
+
+        
+
+        
+
+        
+
+        
+
+    </header>
+
+    
+
+   <!------------------------------------------->
+
+        <div class="main_container">
+		
+		<div class="slide">
+
+        <div class="main_bn">
+
+        <a href="#">   
+
+        </a>
+
+        </div><!--main_bn-->
+
+            
+
+        <div class="bt">
+
+		<a href="#">DISCOVER</a>	
+	
+        </div><!--bt-->
+			
+		</div><!--1번slide-->
+			
+			
+			
+		<div class="slide">
+
+        <div class="main_bn">
+
+        <a href="#">   
+
+        </a>
+
+        </div><!--main_bn-->
+
+            
+
+        <div class="bt">
+
+		<a href="#">DISCOVER</a>	
+	
+        </div><!--bt-->
+			
+		</div><!--2번 slide-->
+			
+		<div class="slide">
+
+        <div class="main_bn">
+
+        <a href="#">   
+
+        </a>
+
+        </div><!--main_bn-->
+
+            
+
+        <div class="bt">
+
+		<a href="#">DISCOVER</a>	
+	
+        </div><!--bt-->
+			
+		</div><!--3번slide-->
+		
+		</div><!--maincontainer-->
+	
+	<script>
+
+		$('.main_container').bxSlider({
+			
+			'auto' : true,
+			//자동으로 넘어가게 만들기. 옵션값
+			
+			'pause' : 3500,
+			
+			
+			'autoHover' : true, 
+			
+			'mode' : 'fade',
+		});
+		
+		
+		
+		$('.slide').each(function(){
+		  var txt = $(this).text() ;
+		  $(this).css('backgroundColor', txt);
+		});
+	
+			</script>
+
+        
+
+    <!-------------------------------------------->
+
+    
+
+    <div class="evt">
+
+        <a href="#"></a>
+
+    </div><!--evt-->
+
+    <!-------------------------------------------->
+
+   <div class="wrap">
+
+        
+
+        <div class="w_row1">
+
+        <div class="row1">
+
+        <div class="w_box">
+
+        <div class="box"><a href="#">
+		<img src="images/row1_img.png">
+
+        <img class="row1_tit1" src="images/row1_tit1.png">
+		</a>
+        </div>
+
+            
+
+        <div class="box"><a href="#">
+		<img src="images/row1_img2.png">
+        <img class="row1_tit2" src="images/row1_tit2.png">    
+			</a>
+        </div>
+
+            
+
+        <div class="box"><a href="#">
+			<img src="images/row1_img3.png">
+
+            <img class="row1_tit3" src="images/row1_tit3.png">
+           </a>
+        </div>
+
+            
+
+        <div class="box"><a href="#">
+		<img src="images/row1_img4.png">
+
+        <img class="row1_tit4" src="images/row1_tit1.png">
+           </a>
+        </div>
+
+            
+
+        <div class="box"><a href="#">
+		<img src="images/row1_img5.png">	
+        <img class="row1_tit5"src="images/row1_tit2.png">    
+           </a>
+        </div>
+			
+			<div class="box"><a href="#">
+		<img src="images/row1_img6.jpg">	    
+           </a>
+        </div>
+		
+
+			<div class="box"><a href="#">
+		<img src="images/row1_img7.jpg">	    
+           </a>
+        </div>
+			
+			<div class="box"><a href="#">
+		<img src="images/row1_img8.jpg">	    
+           </a>
+        </div>
+			
+			<div class="box"><a href="#">
+		<img src="images/row1_img9.jpg">	    
+           </a>
+        </div>
+			
+			<div class="box"><a href="#">
+		<img src="images/row1_img10.jpg">	    
+           </a>
+        </div>
+        </div><!--w_box--> 
+
+            
+
+        <div class="ctrl">
+
+
+            <a href="#" class="prev"><img src="images/a_left.png"></a>
+
+
+            
+
+
+            <a href="#" class="next">
+
+                <img src="images/a_right.png">
+
+                </a>
+
+
+            
+
+        </div><!--ctrl-->
+
+        
+
+        </div><!--row1-->
+
+        
+
+            </div><!--w_row1-->
+
+    </div><!--wrap-->
+
+  <script>
+	  
+	  
+	  $('.ctrl').find('a').click(function(e){
+		  e.preventDefault();
+		  
+	  })
+	
+	  $('.w_box').bxSlider({
+		  
+		  'slideWidth': 1400,
+		  'minSlides':5,
+		  'maxSlides':10
+		  ,
+		  'moveSlides':1,
+		  'nextSelector':'.row1 .ctrl .next',
+		  'prevSelector':'.row1 .ctrl .prev',
+		  
+		  
+	  });
+	  
+	  
+	  
+	
+  </script> 
+
+    
+
+  
+ 
+<!--row2-->
+<div class="row2">
+<div class="row2_wrap">
+	
+<h2><img src="images/tit_commingsoon.jpg"></h2>
+	
+<div class="row2_container">
+
+<ul class="row2_menu">
+	<li><a href="#">호두까기 인형과 4개의 왕국</a></li>	
+	<li><a href="#">주먹왕 랄프2</a></li>	
+	<li><a href="#">메리 포핀스 리턴즈</a></li><li><a href="#">덤보</a></li>	
+</ul><!--row2_menu리모콘-->
+</div><!--row2container-->
+</div><!--row2_wrap-->	
+
+<div class="mov">
+<div>
+<video type="video/mp4" id="vd" src="images/THE%20NUTCRACKER%20AND%20THE%20FOUR%20REALMS.mp4" autoplay="autoplay" loop="loop" muted></video>
+</div><!--호두-->	
+<div>
+<video type="video/mp4" id="vd" src="images/Wreck-It%20Ralph%202.mp4" autoplay="autoplay" loop="loop" muted></video>
+</div>	<!--랄프-->
+<div>
+<video type="video/mp4" id="vd" src="images/Mary%20Poppins%20Returns%20Official%20Trailer.mp4" autoplay="autoplay" loop="loop" muted></video>
+</div>	<!--메리포핀스-->
+<div>
+<video type="video/mp4" id="vd" src="images/Dumbo%20Official%20Teaser%20Trailer.mp4"autoplay="autoplay" loop="loop" muted></video>
+</div>	<!--덤보-->
+</div><!--mov내용물 감싸줄 랩-->
+	
+<script>
+			
+	var bgColor=['#020257', '#8c2424' ,'#28193a', '#65929f'];//색깔바꾸고싶으면 순서에 맞게
+
+	
+ $('.row2_menu li').on('click', function(e){
+				
+	 e.preventDefault();
+var i = $(this).index();
+				
+$('.mov div').eq(i).show().siblings().hide();
+ 
+$('.mov').css({'backgroundColor' : bgColor[i]});
+	 
+	 			
+	var vid = $('.mov').children().eq(i).find('video').get(0);
+	vid.currentTime = 0;
+	
+	 
+	vid.play();
+	$('.mov').children().eq(i).siblings().find('video').get(0).pause();
+	
+	 
+	 
+	 
+ })//row2_menu li click
+						
+</script>
+			
+	
+</div><!--row2-->
+	
+<div class="row3">
+	<div class="row3_wrap">
+	<h2><img src="images/tit_contents.jpg"></h2>
+	<div class="row3_box">
+	<div class="box_intop">
+	<div class="box">
+	<a href="#">
+
+	</a></div>
+	<div class="box">
+	<a href="#">
+	
+	</a></div>
+	<div class="box">
+	<a href="#">
+	
+	</a></div>
+	</div><!--top-->
+		
+	<div class="box_inbottom">
+	<div class="box">
+	<a href="#">
+	
+	</a>
+	</div>
+	<div class="box">
+	<a href="#">
+		
+	</a>
+	</div>
+	<div class="box">
+	<a href="#">
+	
+	</a>
+	</div>
+	</div><!--bottom-->	
+		
+		
+	</div><!--row3_box-->
+	</div><!--row3wrap-->
+</div><!--row3-->
+	
+<!---**********row4*********--->
+<div class="row4">
+<h2><img src="images/tit_disneyland.jpg"></h2>	
+
+<div class="land">
+
+	<div class="land_in">
+	
+		<div class="in1">
+		<a href="#">
+			<img src="images/row4_img.jpg">
+		
+			
+		<div class="in1_hover">
+			<button><img src="images/ico_arrow.png"></button>
+			<p>PLAY</p>
+		</div>	
+		</a>	
+		</div>
+		
+		<div class="in2">
+		<video src="images/halloweenmovie.mp4" muted></video>
+		</div>
+		
+		
+	</div>
+
+</div><!--land-->
+
+<script>
+$('.in1').on('click',function(e){
+	e.preventDefault();
+	
+	$(this).parent().css({'transform' : 'translateX(-50%)'})
+	
+	var vid = $('.in2').find('video').get(0);
+	vid.currentTime = 0;
+	vid.play();
+ 	
+	
+	
+	
+});
+	
+$('.in2').on('click',function(){
+	
+	$(this).parent().css({'transform' : 'translateX(0)'})
+	
+	
+})	
+	
+	
+	
+	
+</script>	
+	
+	
+	
+	
+<div class="row4_wrap">
+<ul class="row4_event">
+<li><a href="#">
+<img src="images/row4_event1.jpg">
+</a></li>	
+<li><a href="#">
+<img src="images/row4_event2.jpg">
+</a></li>	
+</ul><!--row4_event-->
+</div><!--row4_wrap-->
+	
+</div><!--row4-->
+	
+	
+ <div class="row5">
+    <h3>
+     DISNEY FAMILY  
+    </h3>
+      
+    <div class="family">
+      <div class="name">
+      <a href="#">
+       <img src="images/family1_03.png">    
+      </a>
+      </div><!--첫번째 계열사-->
+      <div class="name">
+       <a href="#">
+        <img src="images/family2_06.png">
+        </a>   
+       </div><!--두번째 계열사-->
+      <div class="name">
+        <a href="#">
+        <img src="images/family3_09.png">
+        </a>
+      </div><!--세번째 계열사-->
+      <div class="name">
+        <a href="#">
+        <img src="images/family4_09.png">  
+        </a>
+        </div>
+        
+    </div><!--family-->  
+  </div><!--row5-->
+    
+  <div class="row6">
+    	<div class="f_container">
+   <div class="job">      
+    <a href="#">
+     <img src="images/employment_19.jpg">  
+    </a>
+   </div><!--job-->
+          
+  <div class="box">      
+   <div class="news">
+    <img src="images/news.png">   
+   </div><!--news-->
+     
+	  
+<div class="f_con">
+	<div class="f_slide">
+    <div class="txt">
+       
+	<a href="#">
+     <h5>[공지사항]</h5>   
+    
+     <p>"거대 콘텐츠 기업의 만남" 월트디즈니,약 80조에 폭스 인수"</p>
+       
+		<span>2018.10.24 조회수4792</span>   
+       
+	</a>
+    </div><!--txt-->    
+	</div><!--f_slide-->
+		
+	<div class="f_slide">
+    <div class="txt">
+       
+	<a href="#">
+     <h5>[뉴스]</h5>   
+    
+     <p>"디즈니 마블 어벤져스 인피니티 워, 박스오피스 3주 연속 1위" </p>
+       
+		<span>2018.10.24 조회수4792</span>   
+       
+	</a>
+    </div><!--txt-->    
+	</div><!--f_slide-->
+		
+		<div class="f_slide">
+    <div class="txt">
+       
+	<a href="#">
+     <h5>[뉴스]</h5>   
+    
+     <p>"디즈니 라이브 액션 '덤보'3월 개봉확정" </p>
+       
+		<span>2018.12.26 조회수4792</span>   
+       
+	</a>
+    </div><!--txt-->
+			
+		
+	</div><!--f_slide-->
+		
+	<div class="f_slide">
+    <div class="txt">
+       
+	<a href="#">
+     <h5>[뉴스]</h5>   
+    
+     <p>"디즈니-스퀘어에닉스'킹덤하츠' 한국어 자막 버전 발매 결정"</p>
+       
+		<span>2019.01.15 조회수4792</span>   
+       
+	</a>
+    </div><!--txt-->    
+	</div><!--f_slide-->
+	
+	  </div>
+		<script>
+		//.container 선택->'' 반드시 사용해야한다
+		$('.f_con').bxSlider({
+		
+			'auto' : true,
+			//자동으로 넘어가게 만들기. 옵션값
+			
+			'pause' : 5000,
+			//자동슬라이드 시간 1초=1000
+			
+			'autoHover' : true, //마우스올리면 자동멈춤
+			
+			'mode' : 'vertical',// 위로올라가기 슬라이드 진행방향 vertical, fade
+		});
+		//.은 접근대상자
+		
+		
+		$('.f_slide').each(function(){
+		  var txt = $(this).text() ;
+		  $(this).css('backgroundColor', txt);
+		});
+	
+			</script>
+		
+		
+		
+		
+		
+		
+		
+		
+	  </div><!--f_container-->
+<!--
+	  
+	 <div class="row6_btn">
+	  <div class="row6_up">
+		 <a href="#">
+		<img src="images/on.png">
+		 </a>
+		 </div>
+		<div class="row6_stop">
+		<img src="images/start.png">
+		 <a href="#">
+		</a>
+		 </div>
+		<div class="row6_down">
+		 <a href="#">
+		<img src="images/under.png">
+		</a>
+		 </div>
+	 </div>row6_btn
+-->
+   
+   </div><!--box-->      
+
+  </div><!--row6-->
+    
+<footer>
+     
+    <div class="f_wrap">
+     <div class="level1">
+      <div class="f_logo">
+       <img src="images/f_logo.png"> 
+      </div><!--f_logo-->
+        <ul class="f_util">
+         
+         <li><a href="#">이용약관</a></li>
+         <li><a href="#">개인정보보호정책</a></li>
+         <li><a href="#">사이트맵</a></li>
+               
+        </ul><!--f_util--> 
+           
+     </div><!--level1-->
+        
+     <div class="level2">
+      <ul class="sns">
+        <li><a href="#">
+         <i class="fab fa-blogger"></i>     
+        </a></li><!--블로그 아이콘--> 
+        <li><a href="#">
+         <i class="fab fa-facebook"></i>    
+        </a></li><!--페이스북 아이콘--> 
+        <li><a href="#">
+         <i class="fab fa-instagram"></i>    
+        </a></li><!--인스타 아이콘-->
+        <li><a href="#">
+         <i class="fab fa-youtube"></i>    
+        </a></li><!--유튜브 아이콘--> 
+      </ul><!--sns-->     
+         
+     <p class="f_txt">
+     사이트운영자: 유아경<br>
+     부산광역시 부산진구 신천대로50번길 79<br>
+     디즈니ⓒDisney ⓒDisney/PixarⓒMARVELⓒ & ™ Lucasfilm Ltd.<br>
+         
+    </p>     
+     </div><!--level2-->    
+     
+    </div>
+     
+ </footer>       
+    
+	
+</body>
+</html>

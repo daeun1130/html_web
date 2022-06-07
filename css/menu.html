@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <title>메뉴</title>
+    <style>
+        .container{width:600px;
+        height:50px;
+        background-color:#ccc;}
+    
+        .box{width:120px;
+        height:50px;
+        float:left;
+        text-align:center;
+        line-height:50px;}
+    
+        .box:hover{background-color: #aaa;}
+        
+        span{height:30px;
+        background-color: #000;
+        color:#000;}
+        /*박스인 보이지 않는 상태였다가
+        박스에 마우스 올리면 나타나게 만들기*/
+        
+        .boxin{height:0;
+        overflow:hidden;
+        transition: all 0.6s;}
+        
+        .box:hover .boxin{height:150px;}
+        
+        .boxin span{
+            display: block;
+            background-color: #000;
+            color:#fff;
+            height: 30px;
+            line-height:30px;
+        }
+    
+    </style>
+    </head>
+    <body>
+    <div class="container">
+        <div class="box">메뉴1
+        <div class="boxin">
+            <span>아이템1</span>
+             <span>아이템2</span>
+             <span>아이템3</span>
+             <span>아이템4</span>
+            </div><!--box내용물-->
+        </div>
+        
+        <div class="box">메뉴2
+            <div class="boxin">
+        <span>아이템1</span>
+             <span>아이템2</span>
+             <span>아이템3</span>
+             <span>아이템4</span>
+            </div>
+        </div>
+       
+       
+        <div class="box">메뉴3
+            <div class="boxin">
+        <span>아이템1</span>
+             <span>아이템2</span>
+             <span>아이템3</span>
+             <span>아이템4</span>
+            </div><!--box내용물-->
+        </div>
+        
+        <div class="box">메뉴4
+            <div class="boxin">
+    <span>아이템1</span>
+             <span>아이템2</span>
+             <span>아이템3</span>
+             <span>아이템4</span>
+            </div><!--box내용물-->
+        </div>
+        <div class="box">메뉴5
+            <div class="boxin">
+<span>아이템1</span>
+             <span>아이템2</span>
+             <span>아이템3</span>
+             <span>아이템4</span>
+            </div><!--box내용물-->
+        </div>
+        <!--container-->
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+</html>

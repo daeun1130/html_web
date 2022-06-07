@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+    <title>full2</title>
+    <style>
+        *{margin:0;padding:0;}
+        ul{list-style: none;}
+        a{text-decoration: none;
+        color:inherit;
+        }
+        #gnb{
+            position: fixed;
+            top:24px;
+            right:24px;
+        }
+        #gnb li{
+            float:left;
+            margin-right: 20px;
+            color: #fff;
+            width:30px;
+        }
+        #gnb li.on{
+            color:gold;
+            font-size: bold;
+            text-decoration: underline;
+            text-decoration-style: dashed;
+        }
+        #gnb li:hover{
+            color:gold;
+            font-size: bold;
+            text-decoration: underline;
+            text-decoration-style: dashed;
+        }
+        #wrap{}
+        #wrap section{}
+        .s1{
+            background-color: palegoldenrod;
+            height:100vh;
+        }
+        .s2{
+            background-color: lightblue;
+            height:2000px;
+        }
+        .s3{
+            background-color: lightcoral;
+            height:2500px;
+        }
+        .s4{
+            background-color: lavender;
+            height:3000px;
+        }
+        .s5{
+            background-color: lightpink;
+            height:100vh;
+        }
+    </style>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        
+    //브라우저 리사이징 시작
+        $(window).on('resize',function(){
+        var ht=$(window).height();
+   $('.s1,s5').height(ht);
+    //브라우저 높이값 구해서 적용
+    });//리사이징 끝
+        
+    $('#gnb li').on('click',function(){
+       var a=$(this).index();
+       var s=$('section').eq(a).offset().top;
+        $('html,body').animate({'scrollTop':s});//애니메이트
+        })//li클릭 섹션 이동
+        
+    //스크롤이 존재할 때 해당 li에게 자동으로on붙이기
+        $(window).on('scroll',function(){
+        var a=$(window).scrollTop();
+        
+        var s2=$('.s2').offset().top;
+        var s3=$('.s3').offset().top;
+        var s4=$('.s4').offset().top;
+        var s5=$('.s5').offset().top;
+            
+            if(a>0 && a<s2){
+                $('#gnb li').eq(0).addClass('on').siblings().removeClass('on');
+            }else if(a>=s2 && a<s3){
+                $('#gnb li').eq(1).addClass('on').siblings().removeClass('on');
+            }else if(a>=s3 && a<s4){
+                $('#gnb li').eq(2).addClass('on').siblings().removeClass('on');
+            }else if(a>=s4 &&a<s4){
+                $('#gnb li').eq(3).addClass('on').siblings().removeClass('on');
+            }else if(a>=s5){
+                $('#gnb li').eq(4).addClass('on').siblings().removeClass('on');
+            }
+        })//스크롤
+    
+        
+    })//오프닝구문
+    </script>
+    </head>
+    <body>
+    <ul id="gnb">
+    <li class="on"><a href="#">s1</a></li>    
+    <li><a href="#">s2</a></li>    
+    <li><a href="#">s3</a></li>    
+    <li><a href="#">s4</a></li>    
+    <li><a href="#">s5</a></li>    
+    </ul><!--#gnb-->
+        
+    <div id="wrap">
+    <section class="s1"></section>    
+    <section class="s2"></section>    
+    <section class="s3"></section>    
+    <section class="s4"></section>    
+    <section class="s5"></section>    
+    </div><!--#wrap-->
+        
+    </body>
+</html>

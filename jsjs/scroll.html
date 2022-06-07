@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+    <title>스크롤</title>
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: lightskyblue;
+            font-size: 42px;
+            font-weight: 900;
+            font-family: arial;
+            line-height: 150px;
+            text-align: center;
+            position: fixed;
+            top: 20px; right: 20px;
+        }
+        body{
+            height: 4000px;
+        }
+        .space{
+            width: 200px;
+            height: 200px;
+            background-color: #f06;
+            position: absolute;
+            top:1200px; left: 50%;
+            margin-left: -100px;
+        }
+        .con{
+            width: 800px;
+            position: absolute;
+            top: 2000px; left: 50%;
+            margin-left: -400px;
+        }
+        .con.on .b{
+            top:0;
+            opacity: 1;
+        }
+        .con .b{
+            width: 250px;
+            height: 250px;
+            background-color: #f06;
+            float: left;
+            margin-right: 25px;
+            position: relative;
+            top: 100px;
+            opacity: 0;
+            transition: all 0.5s;
+            transition-timing-function: ease-out;
+        }
+        .con .b1{
+            transition-delay: 0;
+        }
+        .con .b2{
+            transition-delay: 0.1s;
+        }
+        .con .b3{
+            transition-delay: 0.3s;
+            margin-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    
+    <div class="space"></div>
+    
+    <div class="con">
+        <div class="b b1"></div>
+        <div class="b b2"></div>
+        <div class="b b3"></div>
+    </div><!--con-->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    
+    $(window).on('scroll',function(){
+    
+        var a = $(window).scrollTop(); 
+        //스크롤의 높이값을 구하는 속성 (지금은 변수에 저장한상태)
+        $('.box').text(a);
+        if(a>=1000){
+            $('.space').css({'backgroundColor':'#08f'})
+        }
+        else{
+            $('.space').css({'backgroundColor':''})
+        }
+        
+        if(a>=1600){
+            $('.con').addClass('on')
+        }
+        
+    })
+</script>
+</body>
+</html>

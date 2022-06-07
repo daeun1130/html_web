@@ -1,0 +1,456 @@
+@charset 'utf-8';
+
+*{
+    margin:0;padding:0;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    vertical-align: top;
+}
+
+
+#wrap{
+    min-width:320px;
+    /*최소너비
+    320px미만의 브라우저 혹은 기기에서 웹을 볼 경우 브라우저 하단에 가로 스크롤바가 생김 (320믿으로 줄어들지 않음*/
+}
+
+
+.popup{
+    width:100%;
+    height:56px;
+    background-color: #747b8e;
+    position: relative;
+}
+.popup .txt{
+    color:#fff;
+    font-size:12px;
+    padding-top:11px;
+    padding-left:44px;
+    background:url(../images/top_app.png) no-repeat;
+    background-size:28px auto;
+    background-position: 10px 13px;
+}
+.popup .btn{
+    position: absolute;
+    top:0px;
+    right:52px;
+    padding:14px 0;
+}
+.popup .btn img{
+    height:28px;
+    width:auto;
+    /*img 는 원래 너비나 높이 둘 중 하나만 값으ㅡㄹ 정해주면 알아서 비율에 맞게 줄어듬*/
+}
+.popup .close{
+    background-color: pink;
+    position: absolute;
+    top:0;
+    right:0;
+    width:16px;
+    height:16px;
+    padding:20px 13px;
+}
+.popup .close img{
+    height:16px;
+    width:auto;
+}
+
+/*header*/
+
+header{
+    height:50px;
+    background-color: #eee;
+    position: relative;
+}
+
+header #logo{
+    text-align: center;
+    line-height: 50px;
+}
+header #logo a{}
+header #logo a img{
+    height:20px;
+    width:auto;
+    vertical-align: 5px;
+    
+    /*이미지배열을 위한속성
+    top,bottom,middle의 키워드로 주는 때도 있고 px로 조정하는 방법도 있다.*/
+}
+
+
+header .all_btn{
+    height:50px;
+    width:42px;
+    background:none;
+    border:0;
+/*
+    outline-color: thistle;
+    outline-style: solid;
+*/
+    position: absolute;
+    top:0;
+    left:0;
+}
+header .all_btn span{
+    width:17px;
+    height:2px;
+    display: block;
+    background-color:#6f6f6f;
+    margin-bottom:2px;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+header .all_btn span:last-child{
+    margin-bottom:0px;
+}
+
+header .srch{
+    width:24px;
+    height:50px;
+    text-indent:-9999px;
+    background-image: url(../images/btn_hdsearch.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 17px auto;
+    background-color:transparent;
+    border:0;
+    position: absolute;
+    top:0;
+    right:40px;
+}
+header .mybtn{
+    width:24px;
+    height:50px;
+    text-indent:-9999px;
+    background-image: url(../images/btn_hdright.png);
+    background-repeat: no-repeat;
+    background-size: 17px auto;
+    background-position: center;
+    background-color:none;
+    background-color:transparent;
+    border:0;
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+.soundonly{
+    text-indent:-9999px;
+    height:0;
+    font-size: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    color:transparent;
+}
+nav{
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    position: relative;
+}
+nav .gnb{}
+nav .gnb:after{
+    content:'';
+    clear: both;
+    display: block;
+}
+nav .gnb li{
+    float:left;
+    width:15%;
+    text-align:center;
+    font-size: 16px;
+    color:#444;
+    font-weight:bold;
+    box-sizing: border-box;
+    position: relative;
+}
+
+nav .gnb li a{
+    padding:12px 0;
+    display: block;
+}
+
+nav .gnb li:last-child{
+    width:20%;
+}
+nav .btn{
+    position: absolute;
+    top:0;
+    right:0;
+    width:44px;
+    height:44px;
+    background:#fff;
+    border: 0;
+    border-left:1px solid #ddd;
+
+}
+nav .btn img{
+    height:9px;
+    width:auto;
+    position: relative;
+    top:4px;
+}
+nav .gnb li.on{
+    color:#f06;
+    border-bottom:1px solid #f06;
+}
+
+nav .gnb li.on:after{
+    content: '';
+    display: block;
+    width:100%;
+    height:4px;
+    background-color: #f06;
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+
+nav .allmenu{
+    display:none;
+    border-bottom:1px solid #ddd;
+   position: absolute;
+    width:100%;
+    padding:8px;
+    box-sizing: border-box;
+    z-index: 11;
+    background: #fff;
+  
+}
+
+nav .allmenu:after{
+    content: '';
+    clear: both;
+    display:block;
+}
+
+nav .allmenu li{
+    text-align: center;
+    float:left;
+    width:33.33%;
+    box-sizing: border-box;
+    padding:5px;
+}
+
+nav .allmenu li.on a{
+    color:#f06;
+    border:1px solid #f06;
+}
+
+nav .allmenu li a{
+      border:1px solid #ccc;
+    padding:11px 0;
+    display: block;
+}
+
+
+
+.main_bn{
+    position: relative;
+}
+.main_bn .simg{
+    width:100%;
+}
+.main_bn .simg img{
+    width:100%;
+    height:auto;
+}
+
+.main_bn .pager{
+    position: absolute;
+    bottom:15px;
+    right:15px;
+    background-color: rgba(0,0,0,0.5);
+    font-size: 18px;
+    color:#eee;
+    height:26px;
+    padding:0 10px;
+    border-radius: 100px;
+    }
+
+
+.quick{}
+.quick ul{}
+.quick ul:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.quick li{
+    width:25%;
+    float:left;
+    font-size: 12px;
+    text-align: center;
+    line-height: 25px;
+    box-sizing: border-box;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    
+    }
+.quick li a{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: center 10px;
+    color:#6f6f6f;
+    padding-top:44px;
+    display: block;
+    background-size: 30px auto;
+}
+.quick .a1 a{
+    background-image: url(../images/tab01.png);
+}
+.quick .a2 a{
+     background-image: url(../images/tab02.png);
+}
+.quick .a3 a{
+     background-image: url(../images/tab03.png);
+}
+.quick .a4 a{
+     background-image: url(../images/tab04.png);
+}
+.quick .a5 a{
+     background-image: url(../images/tab05.png);
+}
+.quick .a6 a{
+     background-image: url(../images/tab06.png);
+}
+.quick .a7 a{
+     background-image: url(../images/tab07.png);
+}
+.quick .a8 a{
+     background-image: url(../images/tab08.png);
+}
+.quick .a9 a{
+     background-image: url(../images/tab09.png);
+}
+.quick .a10 a{
+     background-image: url(../images/tab10.png);
+}
+.quick .a11 a{
+     background-image: url(../images/tab11.png);
+}
+.quick .a12 a{
+     background-image: url(../images/tab12.png);
+}
+
+
+
+.sub_bn{
+    padding-top:15px;
+    background-color:#ddd;
+}
+.sub_bn a{}
+.sub_bn img{
+    width:100%;
+    height:auto;
+    }
+
+
+.f_menu{
+    border-top:1px solid #666;
+    font-size:14px;
+    height:40px;
+    border-bottom:1px solid #ccc;
+}
+.f_menu:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.f_menu li{
+    width:37%;
+    float:left;
+    text-align:center;
+    border-right:1px solid #aaa;
+    box-sizing: border-box;
+}
+.f_menu li:last-child{
+    width:26%;
+    border-right:0;
+    position: relative;
+}
+.f_menu li:last-child:after{
+    content:'';
+    width:9.5px;
+    height:5px;
+    background-image: url(../images/bg_footop.png);
+    background-repeat: no-repeat;
+    display: block;
+    background-size: auto 5px;
+    position: absolute;
+    top:20px;
+    left:50%;
+    margin-left:25px;
+    /*상대값을 가진 박스 내부에 요소를 위치 시킬 때 언제나 같은 자리에 고정 시키기 위한 방법
+    1.left던 right던 50%를 준다 
+    2.원하는 위치의 자리까지 margin을 사용하여 배치를 시킨다*/
+    
+}
+.f_menu li a{
+    display: block;
+    padding:12px 0 13px;
+}
+
+
+footer{
+    margin-top:10px;
+}
+footer .f_info{
+    font-size: 13px;
+    text-align:center;
+    color:red;
+    font-size: 0;
+}
+footer .f_info li{
+    display: inline-block;
+    font-size: 13px;
+}
+footer .f_info li:after{
+    content:'|';
+    color:#333;
+    margin:0 8px;
+}
+
+footer .f_info li:nth-child(2){
+    font-weight: bold;
+}
+
+footer .f_info li:last-child:after{
+    content:'';
+}
+footer .f_info li a{}
+
+footer address, .copyright{
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    font-style: normal;
+    padding:0 8px;
+}
+footer address{
+    margin:15px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

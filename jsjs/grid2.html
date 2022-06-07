@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+    <title>반응형 헤더</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+    
+    <style>
+        *{margin:0;padding:0;}
+        ul{list-style: none;}
+        a{
+            color: inherit;
+        text-decoration: none;
+        }
+        header{
+            height:50px;
+            background-color: #132822;
+            color:#8e9996;
+        }
+        header h1{
+            font-size: 22px;
+            text-align: center;
+            padding-top:8px;
+            
+            
+        }
+        header .all_btn{
+            width:50px;
+            height:50px;
+            border:0;
+            background-color: rgba(0,0,0,0.4);
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        .all_btn span{
+            display: block;
+            width:25px;
+            height:3px;
+            margin-bottom: 3px;
+            background-color: #8e9996;
+            margin:0 auto 3px;
+        }  
+        .all_btn span:last-child{
+            margin-bottom: 0;
+        }
+        
+        .gnb{
+            background-color: #132822;
+            position: fixed;
+            width:100%;
+            height:100%;
+            top:0;
+            left:-100%;
+            line-height: 30px;
+            
+        }
+        .gnb li{
+            padding-left: 20px;
+        }
+        .gnb .close{
+            position: absolute;
+            right:10px;
+            top:10px;
+        }
+        
+        .main_bn{
+            height:320px;
+            background-color: lightpink;
+        }
+        .con .box{
+            width:50%;
+            height:200px;
+            float:left;
+        }
+        .con .box:nth-child(1){
+            background-color: #000;
+        }
+        .con .box:nth-child(2){
+            background-color: #222;
+        }
+        .con .box:nth-child(3){
+            background-color: #444;
+        }
+        .con .box:nth-child(4){
+            background-color: #666;
+        }
+        .con .box:nth-child(5){
+            background-color: #888;
+        }
+        .con .box:nth-child(6){
+            background-color: #aaa;
+        }
+        .con .box:nth-child(7){
+            background-color: #ccc;
+        }
+        .con .box:nth-child(8){
+            background-color: #eee;
+        }
+        
+        
+    /*모니터화면 1024일때부터 설정해주기*/
+        
+        @media all and (min-width:1024px){
+            header{height:147px;}
+            .all_btn{
+                display: none;
+            }
+            header h1{
+                padding: 30px;
+                font-size: 35px;
+            }
+            .gnb{
+                background-color: transparent;
+                position: unset;
+                /*position을 없애는 것:unset(모든 속성을 리셋시키는 거)
+                position:static(포지션이 없는 상태의 기본값)
+                */
+                line-height: normal;
+                text-align: center;
+                font-size: 0;
+            }
+            
+            .gnb .close{
+                display: none;
+            }
+            .gnb li{
+                display: inline-block;
+                padding:0;
+                font-size: 18px;
+                margin:0 35px;
+                
+            }
+            
+            .main_bn{height:600px;}
+            
+            .con .box{
+                width:25%;
+            }
+        }/*1024*/
+    </style>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        
+        var wt=$(window).width();
+        if(wt=>0&&wt<768){
+            //모바일사이즈에서 작동할 제이쿼리
+            
+            
+        }else if(wt>=768 && wt<1024){
+            //태블릿에서 작동할 제이쿼리
+        }else{}
+        
+        $(window).on('resize',function(){
+            
+        })//한세트 더
+        
+        $('.all_btn').on('click',function(){
+            $('.gnb').animate({'left':0})
+        });
+        
+    $('.close').on('click',function(){
+        $('.gnb').animate({'left':'-100%'});
+    })
+        
+        
+    })//오프닝구문
+    </script>
+    </head>
+    <body>
+    <header>
+    <div class="h_wrap">
+        <h1><a href="#">LOGO</a></h1>
+        <button class="all_btn">
+        <span></span>
+        <span></span>
+        <span></span>
+        </button><!--전체메뉴버튼-->
+        
+        <nav class="gnb">
+        <a class="close" href="#">X</a>
+        <ul>
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+            </ul>
+        </nav><!--gnb-->
+        
+    </div><!--h_wrap-->    
+    </header>
+    
+        <div class="main_bn">
+        
+        </div><!--main_bn-->
+        
+        <div class="con">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        </div><!--con-->
+        
+        
+    </body>
+</html>

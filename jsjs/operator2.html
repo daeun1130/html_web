@@ -1,0 +1,91 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>연산자2</title>
+    <style>
+        #box{
+            width:20px;
+            height:30px;
+            background-color: palevioletred;
+        }
+        
+        #round{
+            width:200px;
+            height:200px;
+            font-size: 80px;
+            text-align: center;
+            background-color: antiquewhite;
+            line-height: 200px;
+            border-radius: 50%;
+            user-select: none;
+        }
+    </style>
+    </head>
+    <body>
+        
+        <div id="box">
+        
+        </div>
+        
+        <div id="round">0</div>
+        
+    <script>
+        
+        var box =
+            document.getElementById('box');
+        //#box를 선택해서 변수에 저장
+        
+        var num = 20;
+        
+        box.onclick = function(){
+            num += 10;
+            box.style.width = num+'px';
+        }
+        
+    var w = 40;
+        w = w + 10;
+        w += 10; //대입연산자
+        document.write(w);
+        
+        var y = 50;
+            y = y - 10;
+            y -= 10;
+        document.width(y);
+        
+        /*
+        +=
+        -=
+        *=
+        /=
+        1.하나의 연산자기 때문에, 순서를 거꾸로 써서는 안됨
+        2.사이를 띄어 써도 안됨
+        
+        a - b(o)
+        a + = 10 (x)
+        
+        */
+        
+        
+        var a = 10;
+            a +=1;
+            a++;
+        
+        //++, --
+        //1씩 더해(빼)서 다시 저장
+        
+        document.write('<br>'+a)
+        
+        var round = document.getElementById('round');
+        var num2 = 0;
+        
+        round.onclick = function(){
+            num2++;
+            round.innerHTML = num2;
+        }
+
+    </script>
+    
+    
+    </body>
+</html>

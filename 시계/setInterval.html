@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <title>setInterval</title>
+    </head>
+    <body>
+        
+        <p>
+        <span id="hr">00</span>:
+        <span id="min">00</span>:
+        <span id="sec">00</span>
+        
+        </p>
+        
+        
+        
+    <script>
+         function clock(){
+        var now=new Date();
+        
+        var hr = now.getHours();
+        var min = now.getMinutes();
+        var sec = now.getSeconds();
+        
+document.getElementById('hr').innerHTML=hr;
+        
+document.getElementById('min').innerHTML=min;
+        
+document.getElementById('sec').innerHTML=sec;
+}
+
+clock();
+setInterval(function(){
+    clock();
+    
+    
+       
+},500);
+//    setInterval(function(){
+//        
+//        document.write('안녕하세요')
+//        
+//    },500);    
+        
+        /*
+        setInterval(function)(){},시간)
+        
+        자바스크립트의 시간 1초 = 1000
+                         밀리세컨
+        */
+    
+        
+        
+        
+        
+    </script>
+    </body>
+</html>

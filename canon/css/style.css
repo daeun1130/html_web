@@ -1,0 +1,1145 @@
+@charset'utf-8';
+
+/*css reset*/
+
+*{
+
+	padding: 0;
+
+	margin: 0;
+
+}
+
+ul,ol{
+
+	list-style: none;
+
+}
+
+a{
+
+	color: inherit;
+
+	text-decoration: none;
+
+}
+
+img{
+
+	vertical-align: top;
+
+}
+
+#wrap{
+
+	width: 1164px;
+
+	margin: 0 auto;
+
+}
+
+.main_cl{
+    color:#c03;
+}
+
+/*****************header****************/
+
+header{
+
+	position: relative;
+    height:116px;
+}
+
+.logo{
+
+	padding-top: 12px;
+
+	padding-left: 15px;
+
+	padding-bottom: 12px;
+
+	/*가운데 줄을 위한 padding bottom*/
+
+	border-bottom: 1px solid #ccc;
+
+}
+
+ 
+
+ 
+
+.right_top{
+
+	position: absolute;
+
+	top:15px;
+
+	right: 0;
+
+}
+
+.right_top .util{
+
+	float: left;
+
+	margin-top: 6px;
+
+	margin-right: 15px;
+
+}
+
+.right_top .sns{
+
+	float: left;
+
+	margin-right: 15px;
+
+}
+
+.right_top .search{
+
+	float: left;
+
+	box-sizing: content-box;
+
+	/*
+
+	선은 기본적으로 박스의 바깥에 생긴다. border-box를 쓰면 박스 안에 선이 생긴다. border-box의 반댓말. input은 업데이트마다 유동적으로 border-box가 생겼다 사라졌다해서 디폴트상태로 강제 고정하기 위해 content-box 사용.
+
+	*/
+
+	width: 126px;
+
+	height: 24px;
+
+	border: 2px solid #ccc;
+
+	background-image: url(../images/util_seh.png);
+
+	background-repeat: no-repeat;
+
+	background-position: 7px center;
+
+}
+
+.right_top .util li{
+
+	font-size: 12px;
+
+	color: #666;
+
+	float: left;
+
+	background-image:url(../images/bar_main_util_top.png);
+
+	background-repeat: no-repeat;
+
+	background-position: 0 center;
+
+	padding: 0 10px;
+
+}
+
+.right_top .util li:first-child{
+
+	background: none;
+
+}
+
+.right_top .util li:hover{
+
+	color: #f30;
+
+}
+
+ 
+
+.right_top .sns li{
+
+	float: left;
+
+	margin-right: 6px;
+
+}
+
+.right_top .sns li:last-child{
+
+	margin-right: 0;
+
+}
+
+.right_top .sns li a{
+
+	display: block;
+
+	width: 28px;
+
+	height: 28px;
+
+	background-image: url(../images/sns3.png);
+
+	text-indent: -9999px;
+
+}
+
+.s2 a{
+
+	background-position: -66px 0;
+
+}
+
+.s3 a{
+
+	background-position: -33px 0;
+
+}
+
+.s4 a{
+
+	background-position: -99px 0;
+
+}
+
+.s5 a{
+
+	background-position: -132px 0;
+
+}
+
+ 
+
+/*header_하단영역*/
+
+.gnb{
+
+	margin-left: 15px;
+
+	margin-top: 14px;
+
+}
+
+.gnb:after{
+
+	content: '';
+
+	clear: both;
+
+	display: block;
+
+}
+
+.gnb li{
+
+	float: left;
+
+	font-size: 14px;
+
+	font-weight: bold;
+
+	margin-right: 30px;
+
+}
+
+.gnb li:last-child{
+
+	background-image: url(../images/gnb_e_nor.png);
+
+	background-repeat: no-repeat;
+
+	background-position: 0 center;
+
+	padding-left: 12px;
+
+}
+
+.gnb li:hover{
+
+	color: #c03;
+
+}
+
+.gnb li:last-child:hover{
+
+	background-image: url(../images/gnb_e_nor_hov.png);
+
+}
+
+.sub_gnb{
+
+	position: absolute;
+
+	top: 71px; right: 66px;
+
+}
+
+.sub_gnb li{
+
+	float: left;
+
+	font-size: 14px;
+
+	font-weight: bold;
+
+	background-repeat: no-repeat;
+
+	padding:14px 0px 14px 50px;
+
+	background-position: 10px 8px;
+
+	margin-left: 20px;
+
+}
+
+.sub_gnb li:hover{
+
+	color: #c03;
+
+}
+
+.sub_gnb .sg1{
+
+	background-image: url(../images/gnb2_gall2.png);
+
+}
+
+.sub_gnb .sg2{
+
+	background-image: url(../images/gnb2_maga2.png);
+
+}
+
+.sub_gnb .sg3{
+
+	background-image: url(../images/gnb2_acad2.png);
+
+}
+
+.sub_gnb li a{}
+
+ 
+
+.menu_btn{
+
+	border: 0;
+
+	background: #ccc;
+
+	width: 46px;
+
+	height: 46px;
+
+	position: absolute;
+
+	top: 70px;
+
+	right: 0px;
+
+}
+
+.menu_btn span{
+
+	width: 22px;
+
+	height: 3px;
+
+	display: block;
+
+	background-color: #fff;
+
+	margin: 2.5px auto;
+
+	
+
+}
+
+.menu_btn .num{
+
+	position: absolute;
+
+	top: 5px;
+
+	left: 25px;
+
+	width: 14px;
+
+	height: 14px;
+
+	background-color:#f00;
+
+	border-radius: 50%;
+
+	border: 2px solid #fff;
+
+	color: #fff;
+
+	font-size: 10px;
+
+	text-align: center;
+
+	line-height: 14px;
+
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+
+}
+/*main_bn영역*/
+ 
+.main_bn{}
+.main_bn .bn_img{}
+
+.main_bn .pager{
+    margin:15px auto;
+    width:115px;
+}
+
+.main_bn .pager ul{}
+.main_bn .pager ul li{
+    float:left;
+    margin-left:5px;
+}
+.main_bn .pager:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+
+.main_bn .pager ul li a{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    border:1px solid #ccc;
+    display:block;
+    text-indent:-9999px;
+}
+
+.main_bn .pager li.on a{
+    background-color:#c03;
+    border-color:#c03;
+}
+
+.main_bn .stop{}
+
+/*하단 컨첸츠 영역*/
+.content{}
+/*첫번째 라인*/
+.row1{}
+/*첫번째라인 공통영역*/
+.row1 .box{
+    float:left;
+    margin-right:15px;
+    position:relative;
+}
+.row1 .txt{
+    width:100%;
+    height:137px;
+    background-color:#eee;
+}
+.row1 .txt h3{
+    font-size:15px;
+    margin:0 0 0 15px;
+    padding-top:30px;
+}
+.row1 .txt h3:after{
+    content:'';
+    display:block;
+    width:16px;
+    height:1px;
+    background-color:#c03;
+    margin:10px 0 15px;
+}
+
+.row1 .txt p{
+    font-size:13px;
+    color:#777;
+}
+
+.row1 .s_pager{
+position: absolute;
+bottom:5px;
+    right:5px;
+    width:75px;
+    
+}
+.row1 .s_pager li{
+    float:left;
+    margin-left:5px;
+}
+.row1 .s_pager li a{
+    width:11px;
+    height:11px;
+    display:block;
+    border:1px solid #ccc;
+    border-radius: 50%;
+    background-color:#fff;
+    text-indent:-9999px;
+    
+}
+
+.row1 .s_pager .stop{
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+.row1 .s_pager li.on a{
+    background-color:#c03;
+    border-color:#c03;
+}
+
+.row1 .ctg{
+    position: relative;
+}
+.row1 .ctg .txt{
+    background-color: rgba(255,255,255,0.7);
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+
+.row1 .ctg .txt figure{
+    border-right:1px solid #666;
+    width:100px;
+}
+
+.row1 .ctg .txt p{
+    font-size:26px;
+    color:#777;
+    position: absolute;
+    bottom:25px;
+    left:115px;
+}
+
+.row1 .event{
+    width:280px;
+}
+
+
+.row1 .mg .txt p{
+    margin-left:15px;
+}
+
+.row1 .mg{
+    width:280px;
+    margin-right:0;
+}
+
+/******row2******/
+
+.row2{
+
+	margin-top: 15px;
+
+}
+
+.row2:after{
+
+	content: '';
+
+	clear: both;
+
+	display: block;
+
+}
+
+.row2 .box{
+
+	width: 574px;
+
+	float: left;
+
+}
+
+.row2 .gall{
+
+	position: relative;
+
+	margin-right: 15px;
+
+}
+
+.row2 .gall .txt{
+
+	width: 100%;
+
+	height: 46px;
+
+	background-color: rgba(255,255,255,0.7);
+
+	position: absolute;
+
+	bottom: 0;
+
+	left: 0;
+
+}
+
+.row2 .gall .txt h3{
+
+	float: left;
+
+	margin: 15px 20px 0px 15px;
+
+	font-size: 15px;
+
+	color:444;
+
+}
+
+.row2 .gall .txt h3:after{
+
+	content: '';
+
+	display: inline-block;
+
+	/*인라인정렬값가지면서 블락요소가짐*/
+
+	margin-left: 20px;
+
+	width: 2px;
+
+	height: 16px;
+
+	background-color: #c03;
+
+}
+
+.row2 .gall .txt p{
+
+	float: left;
+
+	margin-top: 13px;
+
+}
+
+.row2 .gall .txt .title{
+
+	font-size: 14px;
+
+	color: #444;
+
+	font-weight: bold;
+
+}
+
+.row2 .gall .txt .name{
+
+	color: #c03;
+
+	font-weight: bold;
+
+	
+
+}
+
+ 
+
+.row2 .product{
+
+	background-color: #eee;
+
+	height: 346px;
+
+	padding:0 20px;
+
+	box-sizing: border-box;
+
+	/*패딩값도 포함*/
+
+}
+
+.row2 .product h3{
+
+	font-size: 15px;
+
+	color: #333;
+
+	font-weight: normal;
+
+	margin-top: 15px;
+
+}
+
+.row2 .product h3:after{
+
+	content: '';
+
+	display: block;
+
+	width: 16px;
+
+	height: 1px;
+
+	background-color: #c03;
+
+	margin: 4px 0;
+
+}
+
+.row2 .product h3 span{
+
+	font-size: 22px;
+
+	font-family: monospace;
+
+	font-weight: bold;
+
+	
+
+}
+
+.row2 .product .p_slide{
+
+	text-align: center;
+
+}
+
+.row2 .product .p_slide:after{
+
+	content:'';
+
+	clear: both;
+
+	display: block;
+
+}
+
+.row2 .product .p_slide div{
+
+	float: left;
+
+	width: 240px;
+
+	
+
+}
+
+.row2 .product .p_slide .slide1{
+
+	margin-right: 54px;
+
+}
+
+.row2 .product .p_slide .slide2{}
+
+.row2 .product img{
+
+	border-bottom: 1px solid #ccc;
+
+}
+
+.row2 .product .txt{
+
+	margin-top: 10px;
+
+}
+
+.row2 .product .txt li:first-child{
+
+	font-size: 16px;
+
+	color: #333;
+
+	font-weight: bold;
+
+}
+
+.row2 .product .txt li:nth-last-child(2){
+
+	color: #666;
+
+	font-size:12px;
+
+	margin-top: 6px;
+
+}
+
+.row2 .product .txt li:nth-last-child(3){
+
+	font-size: 16px;
+
+	font-weight: bold;
+
+	color: #333;
+
+	margin-top: 12px;
+
+}
+
+ 
+
+.row2 .product .s_pager{
+
+	width: 42px;
+
+	margin: 15px auto 0;
+
+	position: relative;
+
+}
+
+ 
+
+.product .s_pager ul{}
+
+.product .s_pager li{
+
+	float: left;
+
+	margin-right: 5px;
+
+}
+
+.product .s_pager li a{
+
+	display: block;
+
+	width: 10px;
+
+	height: 10px;
+
+	border: 1px solid #ccc;
+
+	background-color: #fff;
+
+	border-radius: 50%;
+
+	text-indent: -9999px;
+
+}
+
+ 
+
+.product .s_pager .control{
+
+	position: absolute;
+
+	top: 0;
+
+	right: 0;
+
+}
+
+.product .s_pager .control a{
+
+	position: absolute;
+
+}
+
+.product .s_pager .control .stop{}
+
+.product .s_pager .control .play{
+
+	display: none;
+
+}
+
+
+.row3{
+
+	margin-top: 20px;
+
+}
+
+.row3 ul{}
+
+.row3 ul:after{
+
+	content: '';
+
+	clear: both;
+
+	display: block;
+
+}
+
+.row3 ul li{
+
+	float: left;
+
+	width: 280px;
+
+	text-align: center;
+
+	margin-right: 14px;
+
+}
+
+.row3 ul li:last-child{
+
+	margin-right: 0;
+
+}
+
+ 
+
+.row3 ul li .img{}
+
+.row3 ul li .txt{
+
+	margin-top: 10px;
+
+}
+
+ 
+
+.row3 ul li .txt h4{
+
+	font-size: 14px;
+
+	color: #333;
+
+	margin: 10px 0 5px;
+
+}
+
+.row3 ul li .txt p{
+
+	font-size: 12px;
+
+	color: #666;
+
+	
+
+}
+
+.row4:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+ 
+.row4{
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    margin-top:20px;
+}
+.row4 .bbs{
+    width:calc(100% - 27px);
+    height:58px;
+    line-height:58px;
+        float:left;
+    position:relative;
+}
+
+.row4 .bbs .cate{
+    font-size:15px;
+    font-weight:bold;
+    margin-right:15px;
+}
+.row4 .bbs .tit{
+    font-size:14px;
+    font-weight:bold;
+    margin-right:30px;
+}
+.row4 .bbs .txt{
+    font-size:12px;
+    color:#666;
+}
+.row4 .bbs .date{
+    font-size:12px;
+}
+.row4 .bbs .view{
+    font-size:12px;
+    margin-left:8px;
+}
+
+
+
+
+.row4 .ctrl{
+    width:27px;
+    height:58px;
+    background-color:#c03;
+    float:right;
+}
+
+.row4 .ctrl a{
+    display:block;
+    text-align:center;
+}
+.row4 .ctrl a img{
+    margin-top:4px;
+}
+.row4 .ctrl .play{
+    display:none;
+}
+
+.row4 .bbs .bbs_in{
+    position:absolute;
+    top:0;
+    right:5px;
+}
+
+
+.row5{
+    margin-top:60px;
+}
+.row5:after{
+    content:'';
+    clear:both;
+    display: block;
+}
+.row5 .box{
+    width:261px;
+    float:left;
+    margin-right:40px;
+}
+
+.row5 .box:last-child{
+    margin-right:0;
+}
+
+.row5 figure{
+    float:left;
+}
+.row5 .box .box_in{
+    width:170px;
+    float:right;
+}
+
+.row5 .box:hover .txt{
+    color:#333;
+}
+
+.row5 .tit{
+    font-size:14px;
+    color:#333;
+}
+.row5 .txt{
+    margin-top:4px;
+    font-size:12px;
+    color:#666;
+}
+
+
+/*푸터영역*/
+footer{
+    margin-top:60px;
+}
+.fmenu1{
+    background-color:#eee;
+    height:18px;
+    padding:8px 0;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+}
+.fmenu1 ul{
+    width:1164px;
+    margin:0 auto;
+}
+.fmenu1 ul:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+.fmenu1 ul li{
+    float:left;
+    margin-right:55px;
+    font-size:12px;
+}
+
+
+.fmenu2{}
+
+.fmenu2 .f_in{
+    border-bottom:1px solid #eee;
+}
+.fmenu2 .f_util{
+    width:1164px;
+    margin:0 auto;
+    padding:8px;
+}
+.fmenu2 .f_util li{
+    float:left;
+    font-size:12px;
+}
+
+.fmenu2 .f_util:after{
+    content:'';
+    clear:both;
+    display: block;
+}
+
+.fmenu2 .f_util li:after{
+    content:'|';
+    font-size:8px;
+    color:#ddd;
+    margin:0 12px;
+}
+
+.red{color:#f66;}
+
+footer .f_wrap{
+    width:1164px;
+    margin:12px auto 0;
+}
+
+.f_wrap{
+    position:relative;
+    padding-bottom:40px;
+}
+
+.bg{
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+
+.f_wrap .f_info{}
+.f_wrap .f_info:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+.f_wrap .f_info li{
+    float:left;
+    font-size:12px;
+    font-weight:bold;
+}
+
+footer ul li:last-child:after{
+    content:none !important;
+}
+
+.f_wrap .f_info li:last-child{
+    background-image:url(../images/arr_footer_up.png);
+    background-repeat:no-repeat;
+    background-position:right center;
+    background-position: right center;
+    padding-right:15px;
+}
+
+.f_wrap .f_info li:after{
+    content:'|';
+    color:#ccc;
+    font-size:10px;
+    margin:0 22px;
+}
+
+.f_wrap .company{
+    color:#999;
+    font-size:12px;
+    margin-top:10px;
+}
+.f_wrap address{
+    font-style:normal;
+    color:#999;
+    font-size:12px;
+    margin-top:10px;
+}
+
+
+.f_wrap span:after{
+    content:'';
+    color:#ddd;
+    font-size:10px;
+    margin-left:5px;
+    margin-right:2px;
+}
+
+
+.f_wrap b{
+    color:#f66;
+}
+
+
+

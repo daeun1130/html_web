@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+    <title>노드 추가 생성 제거</title>
+    <style>
+        ul,li{
+            padding:10px;
+            margin:10px;
+            border:1px solid #ddd;
+        }
+        .space{
+            width:200px;
+            height:200px;
+            margin:0 auto;
+            background-color: #ccc;
+        }
+        p{
+            width:120px;
+            height:40px;
+            text-align: center;
+            line-height: 40px;
+            margin: 20px auto;
+            background-color: #000;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="btn">
+        <button class="add">
+            추가
+        </button><!--add-->
+            
+        <button class="add2">
+        추가2    
+        </button>
+            
+        <button class="move1">
+        앞으로 이동    
+        </button>
+            
+        <button class="move2">
+        뒤로 이동    
+        </button>
+            
+        <button class="remove">
+        제거    
+        </button>
+            
+        <button class="hide">
+        숨기기    
+        </button>
+        </div><!--btn-->
+        
+        
+        <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        </ul>
+        
+        <div class="space"></div>
+        <p>click</p>
+        
+    <script src="js/jquery-3.3.1.min.js"></script>
+        
+        <script>
+            //append()
+            //대상에게 마지막 자식을 추가
+            
+            
+            var list=5;
+            
+        $('.add').on('click',function(){
+           
+            $('ul').append('<li>list'+list+'</li>')
+            list++;
+        });
+            
+    //prepend()
+    //첫번째 자식을 추가
+            /*
+            $(부모).prepend('추가할자식')
+            
+            $('추가할자식').prependTo('부모')
+            
+            $(이미 존재하는 자식).prependTo(부모)->부모태그 안의 가장 첫번째 자식으로 보냄
+            */
+            
+       $('.add2').on('click',function(){
+           
+           $('ul').prepend('<li>new list</li>')
+       });     
+            
+//        $('.move1').on('click',function(){
+//            $('<a href="#">에이태그</a>').prependTo('ul');
+//        });
+//            
+          $('.move1').on('click',function(){
+            $('ul li:last-child').prependTo('ul')
+        }) 
+            
+        $('.move2').on('click',function(){
+            $('ul li:first-child').appendTo('ul')
+        });
+    
+        //hide() display:none
+        //show() display:none을 제거
+        $('.hide').on('click',function(){
+            
+            $('li:last-child').hide();
+        });
+            
+        $('.remove').on('click',function(){
+            
+            $('li:last-child').remove();
+            
+        })
+            
+        $('p').on('click',function(){
+            $('.space').hide();
+        })
+            
+            
+        </script>
+    </body>
+</html>

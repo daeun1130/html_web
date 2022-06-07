@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <title>보더3</title>
+    </head>
+    <style>
+    
+        .container{width:800px;
+        background-color:#ccc;
+        margin:0 auto;}
+        
+        .box{width:150px;
+        height:150px;
+        background-color:pink;
+        margin:0 auto 10px;
+        }
+    /*보더는 기존 요소의 너비에 추가가 된가
+        150*150 박스에 상하좌우로 5px씩 선을 주면 160*160*/
+        .container .box:first-child{border-left: 10px solid black;}
+        
+        .container .box:nth-child(2){border:red 5px dotted;}
+        
+        .container .box:nth-child(3){border-top:10px dashed green;
+            border-bottom:10px dashed green;}
+        
+        .container .box:nth-child(4){border-radius:50%;
+        background-color:darkorchid;
+        border:10px solid orange;
+         
+        }
+        /*rad로 시작하는 접두사는 원형
+        border-radius 50%는 동그라미*/
+        .container .box:last-child{border-bottom:15px dashed pink;
+            border-left:15px dashed gold;
+            border-top:15px dashed blue;
+            border-right:15px dashed red;
+            border-radius:50%;
+            background-color:beige;}
+        
+    
+    
+    </style>
+    
+    
+    <body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        
+        
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+</html>

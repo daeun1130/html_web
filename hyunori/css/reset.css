@@ -1,0 +1,23 @@
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR');
+/*reset css*/
+
+*{margin: 0; padding: 0;
+    font-family: 'Noto Serif JP', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit
+}
+ul,ol{
+    list-style: none;
+}
+
+address{font-style: normal;}
+
+img{
+    vertical-align: top;
+}
+

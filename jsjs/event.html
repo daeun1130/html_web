@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+    <title>event</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            border:2px solid #000;
+            margin:20px auto;
+            transition: all 0.6s;
+        }
+        
+        ul{
+            list-style: none;
+            padding:0;
+            text-align: center;
+        }
+        
+        ul li{
+            width:20px;
+            height:20px;
+            background-color: #ccc;
+            border-radius: 50%;
+            display: inline-block;
+        }
+    
+    </style>
+    </head>
+    <body>
+    <div class="box box1">
+    
+    </div>
+        
+    <div class="box box2">
+        
+    </div>
+        
+    <div class="box box3">
+        
+    </div>
+        
+        <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        </ul>
+        
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+        <div class="box box6"></div>
+        
+        <script src="js/jquery-3.3.1.min.js"></script>
+        
+        <script>
+        $('.box1').on('click',function(){
+            
+            $('.box1').css({
+                'backgroundColor':'red'
+            })
+        
+        /*
+        $(선택자).on('이벤트동작',function(){
+        
+        $(선택자).이벤트가 실행되면 일어날 일들
+        
+        }
+        */
+            
+        });
+            
+        $('.box2').on('click',function(){
+            
+            $('.box2').css({
+                'width':'300px',
+                'height':'300px'
+            })
+        });
+             $('.box3').on('click',function(){
+            
+            $('body').css({
+                'backgroundColor':'#f0f0f0'
+            })
+                
+                 $('.box3').css({
+                'backgroundColor':'blue'
+            })
+             });
+            
+            
+        $('li').on('click',function(){
+            
+            $(this).css({
+                'backgroundColor':'#333'
+            })
+            
+        })    
+            
+            $('.box4').on('mouseover',function(){
+                
+                $(this).css({
+                    'backgroundColor':'gold'
+                })
+                
+            }).on('mouseout',function(){
+                
+                $(this).css({
+                    'backgroundColor':'#fff'
+                })
+                
+            })
+            
+            
+    $('.box5').on('mouseover',function(){
+        $(this).css({
+            'border':'10px solid'
+        }).on('mouseout',function(){
+            $(this).css({
+                'border':'2px solid'
+            })
+        })
+    });
+         
+            
+    $('.box6').on('mouseover',function(){
+       $(this).css({
+           'backgroundColor':'skyblue'
+       }).on('mouseout',function(){
+           $(this).css({
+               'backgroundColor':'red'
+           })
+       })
+    });
+            
+//            
+//     $('.box5').on('mouseover',function(){
+//         $(this).css({
+//             'border':'10px solid'})
+//         }).on('mouseout',function({
+//             $(this)({
+//             
+//         })
+//         })      
+//            
+//     $('.box6').on('mouseover',function(){
+//         $(this).css({
+//             'backgroundColor':'skyblue'
+//         })
+//             .on('mouseout',function(){
+//             $(this).css({
+//                 'backgroudColor':'red'
+//             })
+//         })
+            
+//     })       
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </script>
+    </body>
+</html>

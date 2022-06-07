@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+    <title>bx</title>
+    
+    <style>
+        .wrap div{
+            height:450px;
+            font-size: 85px;
+            line-height: 450px;
+            text-align: center;
+            font-weight: 900;
+            font-family: arial;
+        }
+        
+        .box1{background:red;}
+        .box2{background:orange;}
+        .box3{background:gold;}
+        .box4{background:forestgreen;}
+        .box5{background:dodgerblue;}
+        
+        .pager{
+            text-align: center;
+        }
+        .pager a{
+            display:inline-block;
+            width:25px;
+            height:20px;
+            background-color: #333;
+            text-indent: -9999px;
+            margin:0 5px;
+        }
+        a.active{
+            background-color: #f06;
+        }
+    </style>
+    
+    </head>
+    <body>
+    <div class="wrap">
+    <div class="box1">box1</div>    
+    <div class="box2">box2</div>    
+    <div class="box3">box3</div>    
+    <div class="box4">box4</div>    
+    <div class="box5">box5</div>    
+      
+    </div>
+        <!--bxslider로 페이저버튼을 직접제작할 경우 반드시 div>a형태로 만들어야 한다-->
+        
+        <!--
+data-slide-index=""
+data-....=""
+개발자들이 자신의 프로그래밍파일과 html을 연동시키기위해 만든 클래스 체계
+-->
+        <div class="pager">
+            
+
+<!--
+        <a href="#" data-slide-index="0">1</a>
+        <a href="#" data-slide-index="1">2</a>
+        <a href="#" data-slide-index="2">3</a>
+        <a href="#" data-slide-index="3">4</a>
+        <a href="#" data-slide-index="4">5</a>
+-->
+        </div>
+        
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery.bxslider.js"></script>
+        <script>
+        $('.wrap').bxSlider({
+            'pagerCustom':'.pager'
+        });
+            
+        //자동으로 슬라이드개수 추가시 함께 페이저버튼을 추가시키기 위한 코드
+        var a =$('.wrap div').length-2
+        for(i=0; i<a; i++){
+            $('.pager').append('<a href="#" data-slide-index="'+i+'">'+i+'</a>')
+        }
+            
+            
+        //직접제작한 커스텀페이저를 사용
+        </script>
+        
+        
+        
+        
+    </body>
+</html>

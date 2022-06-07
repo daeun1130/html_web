@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <title>백그라운드</title>
+    <style>
+        .box{
+            width:100%;
+            height:480px;
+            background-color:pink;
+            margin:20px 0 0 0;
+        }
+        
+        .box1{
+            background-image: url(images/image1.jpg);
+            background-repeat: no-repeat;
+            background-position:center center;
+        }
+    
+    
+    /*백그라운드 원칙 3개
+        1.백그라운드이미지는 무조건 왼쪽상단에서부터 시작
+        2.웹의 모든 요소는 진행방향이 왼쪽->오른쪽
+        위->아래
+        3.공간을 넘어간는 백그라운드는 나타나지 않는다*/
+    
+        .box2{
+            background-image:url(images/image2.jpg);
+            background-repeat:no-repeat;
+            background-size:contain;
+        }
+    
+        .box3{
+            background-image:url(images/image3.jpg);
+            background-attachment:fixed;
+        }
+    
+        .box4{
+            background:url(images/image3.jpg) no-repeat 40px 50px;
+            background-size:cover;
+        }
+    
+    
+    </style>
+    </head>
+    <body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    
+    
+    
+    
+    </body>
+</html>

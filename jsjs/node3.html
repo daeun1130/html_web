@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+    <title>노드찾기1</title>
+    <style>
+        *{
+            font-size: 14px;
+            color: #333;
+        }
+        div,p,ul,li,h1,h3{
+            margin:10px;
+            padding:10px;
+            border:1px solid #eee;
+        }
+    
+        .select{
+            background-color: #ccc;
+        }
+    
+    </style>
+    </head>
+    <body>
+        
+        <div id="wrap">
+        div,#wrap
+        <div class="header">
+        div, .header
+        <h1>h1</h1>
+        <p class="tit">p, .tit</p>
+        </div><!--header-->
+            
+        <div class="section">
+        div, .section
+        <ul class="menu">
+            ul,.menu
+        <li>list1</li>
+        <li>list2</li>
+        <li class="select">list3</li>
+        <li>list4</li>
+        <li>list5</li>
+        </ul><!--menu-->
+            
+        <div class="box">
+            div, .box
+            <p>p1</p>
+            <p>p2<strong>strong</strong></p>
+            <p class="test1">p3
+            <strong>strong</strong>
+            </p>
+        </div><!--box-->
+        </div><!--section-->
+            
+        <div class="content">
+        div, .content    
+            <div class="con">
+            div, .con
+                <h3>h3</h3>
+        <ul class="list">
+<li>list1</li>
+<li class="test2">list2,test2</li>
+<li>list3<span>span</span></li>
+<li>list4</li>
+                </ul>
+            </div>
+            
+    <div class="space">
+    div,space
+        <div class="item">
+        div, .item 1
+        </div>
+        <div class="item">
+        div, .item 2
+        </div>
+        <div class="item">
+        div, .item 3
+        </div>
+    </div>
+            
+            
+        </div><!--content-->
+            
+        <div class="footer">
+        div, .footer  
+            
+        <h1>h1</h1>
+        <ul class="fmenu">
+        ul, .fmenu
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        </ul>
+            
+        <div class="cr">
+        div, .cr
+        <p class="test1">p,.test1</p>
+        <p class="test2">p,.test2</p>
+        </div><!--cr-->
+        </div><!--footer-->
+        </div><!--#wrap-->
+        
+        
+    <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+   //부모찾기
+    /*
+    parents()
+    모든 조상태그 다 찾기
+    parents('선택자')
+    모든 조상태그 중 선택자에 해당하는 조상태그만 찾음
+    */
+    $('.select').parents('body').css({
+        'border':'2px solid #f06'
+    });
+     
+            
+    $('.select').parent().css({
+        'border':'1px solid blue'
+    })
+            
+ $('.list .test2').parents('.content').siblings('.section').find('.box').children('p').eq(1).children('strong').css({
+        'color':'#f06'
+    })       
+            
+            
+   $('.select').parents('.section').siblings('.content').find('.space').children('.item').eq(0).css({
+       'backgroundColor':'gold'
+   });        
+            
+            
+   $('.list .test2').parents('.content').siblings('.footer').find('.test2').css({
+       'backgroundColor':'pink'
+   })         
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </script>
+    </body>
+</html>

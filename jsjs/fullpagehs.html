@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+    <title>fullpagejs</title>
+    <link href="js/fullpage.css" rel="stylesheet">
+    <style>
+        #wrap .section:nth-child(1){
+            background-color:lightgreen;
+        }
+        #wrap .section:nth-child(2){
+            background-color: bisque;
+        }
+        #wrap .section:nth-child(3){
+            background-color: lightpink;
+        }
+        #wrap .section:nth-child(4){
+            background-color: lightsteelblue;
+        }
+        #wrap .section:nth-child(5){
+            background-color: lightgoldenrodyellow;
+        }
+        
+        #pager{
+            position: fixed;
+            right:20px;
+            top:20px;
+            list-style:none;
+            padding:0;
+            z-index: 999;
+        }
+        #pager li{
+            float:left;
+            margin-left: 40px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        #pager li a{
+            color:#fff;
+            text-decoration: none;
+        }
+        
+        #pager li.active a{color:#f06;} 
+        
+        .box{
+            width:200px;
+            height:200px;
+            background-color: black;
+            position:absolute;
+            top:50%;
+            margin-top: -50px;
+            left:50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: all 1s;
+        }
+        
+    </style>
+    </head>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <body>
+    <!--풀페이지js는 반드시 섹션이 될 영역에게 클래스로 section을 달아줘야 한다-->
+        <ul id="pager">
+        <li data-menuanchor="s1"><a href="#s1">s1</a></li>
+            
+        <li data-menuanchor="s2"><a href="#s2">s2</a></li>
+        <li data-menuanchor="s3"><a href="#s3">s3</a></li>
+        <li data-menuanchor="s4"><a href="#s4">s4</a></li>
+        <li data-menuanchor="s5"><a href="#s5">s5</a></li>
+        </ul>
+        
+    <div id="wrap">
+    <div class="section" id="s1">악악</div>
+        
+    <div class="section" id="s2">
+        <!--fullpage.js사용시 .section내에 slide가진 div를 만들어주면 슬라이드가 자동으로 생성이 된다-->
+        <div class="slide">111</div>
+        <div class="slide">222</div>
+        <div class="slide">333</div>
+        <div class="slide">444</div>
+        <div class="slide">555</div>
+    </div><!--2-->
+        
+    <div class="section" id="s3"></div> 
+        
+    <div class="section" id="s4">
+    <div class="box"></div>    
+    </div><!--4--> 
+        
+    <div class="section" id="s5"></div>    
+    </div><!---#wrap-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/fullpage.min.js"></script>
+        
+        <script>
+        $('#wrap').fullpage({
+            'navigation':true, 
+            //페이저버튼
+            'navigationPosition':'left',
+            //페이저버튼 위치
+            'navigationTooltips':['s1','s2','s3','s4','s5'],
+            //페이저버튼에 페이저설명달아주기
+            'verticalCentered':false,
+            //풀페이지의 초기설정상 모든 컨텐츠는 가운데서 부터 시작한다 그것을 제거하는 코드
+            'menu' : '#pager',
+            //페이저로 쓸 태그묶음 설정
+            anchors:['s1','s2','s3','s4','s5'],
+            afterLoad:function(a,i){
+                if(i == 4){
+                    $('.box').css({
+                        'opacity':1,
+                        'margin-top':'-100px'
+                    })
+                }
+            }
+        });
+        
+        
+        
+        //높이값800 너비1440
+        
+        
+        
+        
+        
+        </script>
+    </body>
+</html>

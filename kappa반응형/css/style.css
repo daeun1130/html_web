@@ -1,0 +1,469 @@
+@charset 'utf-8';
+
+*{margin:0; padding:0;}
+a{
+    color:inherit;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+img{vertical-align: top;}
+
+/*모바일 영역(min-width:320px)*/
+
+header{
+    height:63px;
+    background-color: #e70404;
+    position: relative;
+}
+header h1{
+    width:110px;
+    margin:0 auto;
+    padding-top:22.5px;
+}
+
+header h1 img{
+    width:100%;
+}
+
+header button{
+    /*헤더 내부 모든 버튼 리셋*/
+    background-color:unset;
+    border:0;
+    box-sizing: content-box;
+    /*인풋 관련된 태그들은 box-sizing:border-box가 기본 속성으로 붙어있을때가 있다
+    (이것은 브라우저 업데이트 등의 상황에 따라 자주 변동된다)
+    그래서 box-sizing:content-box를 설정해두면 다른 요소들과 마찬가지로 padding과 border를 쓸 수 있다.
+    */
+}
+header .all_btn{
+    background-color: #333;
+    width:25px;
+    padding:22.5px 20px;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+header .all_btn img{
+    width:100%;
+    height:auto;
+}
+
+header .pc_srch{
+    display: none;
+    /*pc영역에서 보일 버튼이라서 숨겨둠*/
+}
+
+/*이미지 자체 너비값:25px
+버튼전체 너비값:70px;(all_btn랑 똑같이가면 됨)
+백그라운드색상:#222
+*/
+
+header .my_btn{
+    background-color: #222;
+    width:25px;
+    padding:22.5px 20px;
+    position: absolute;
+    right:0;
+    top:0;
+}
+header .my_btn img{
+    width:100%;
+    height:auto;
+}
+
+nav{
+    position: fixed;
+    background-color: rgba(0,0,0,0.6);
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    z-index: 999;
+}
+
+.close{
+    width:25px;
+    background-color: #fff;
+    padding:20px;
+}
+.close img{
+    width:100%;
+    height:auto;
+}
+
+nav .srch{
+    width:calc(100% - 65px);
+    position: absolute;
+    top:0;
+    right:0;
+    font-size: 0;
+}
+nav .srch input{
+    width:calc(100% - 65px);
+    float:left;
+    box-sizing: border-box;
+    border:0;
+    padding:0 15px;
+    background-color: #333;
+    height:65px;
+    
+}
+nav .srch label{
+    height:0;
+    overflow:hidden;
+}
+nav .srch button{
+    width:23px;
+    background-color: #333;
+    padding:21px;
+    
+}
+nav .srch button img{
+    width:100%;
+    height:auto;
+}
+
+nav ul li{
+    background-color: #333;
+    border-top: 1px solid #444;
+    font-weight: bold;
+    color:#f4f4f4;
+    font-size: 12px;
+    padding:25px 0px 15px 20px;
+    
+}
+
+nav ul li.bg_red{
+    background-color: #e70404;
+    
+}
+
+.main_bn{}
+.main_bn img{
+    width:100%;
+    height:auto;
+}
+.main_bn .s1_m{}
+.main_bn .s1_pc{
+    display: none;
+}
+
+.con{
+}
+.con .box{
+    
+    position: relative;
+}
+.con .box{
+    width:50%;
+    float:left;
+}
+.con .box>a>img{
+    width:100%;
+    height:auto;
+}
+.con .box .in{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.8);
+    color:#fff;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.con .box:hover .in{
+    opacity: 1;
+}
+
+.con .box .in p{
+    position: absolute;
+    text-align: center;
+    width:100%;
+    left:0;
+    top:50%;
+    margin-top: -8px;
+}
+.con .box .in .icon{
+    width:30px;
+    position: absolute;
+    right:10px;
+    bottom: 10px;
+    }
+.con .box .in .icon img{
+    width:100%;
+}
+
+.con:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+footer{}
+footer .f1{
+    background-color: #333;
+    padding:20px;
+}
+footer .f1 .f1_in{}
+footer .f1 .f1_in ul:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+footer .f1 .f1_in li{
+    float:left;
+    color:#777;
+    font-size: 13px;
+    border-right: 1px solid #444;
+    line-height: 10px;
+    padding:7px;
+    margin-right: 7px;
+}
+footer .f1 .f1_in li:last-child{
+    border:0;
+}
+footer .f1 .f1_in .f_meun1{}
+footer .f1 .f1_in .f_meun2{
+/*    padding-top: 20px;*/
+}
+footer .f1 .f1_in .f_meun2 li:nth-child(2){
+    color:#c03;
+}
+
+footer .f1 .f_sns{
+    margin-top: 20px;
+}
+footer .f1 .f_sns:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+footer .f1 .f_sns li{
+    margin-right: 30px;
+    float:left;
+}
+footer .f1 .f_sns li a{
+    display: block;
+    width:28px;
+    height:27px;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center 0;
+}
+.fs1 a{background-image: url(../images/fSnsIcon1_m.gif);}
+.fs2 a{background-image: url(../images/fSnsIcon2_m.gif);}
+.fs3 a{background-image: url(../images/fSnsIcon3_m.gif);}
+.fs4 a{background-image: url(../images/fSnsIcon4_m.gif);}
+.fs5 a{background-image: url(../images/fSnsIcon5_m.gif);}
+
+footer .f2{
+    padding-top: 20px;
+    
+}
+footer .f2 .copyright{
+    color:#aaa;
+    margin-top: 16px;
+    font-size: 11px;
+    float:left;
+}
+footer .f2 .mark{
+    float:right;
+}
+footer .f2 .mark img{
+    width:70px;
+    height:auto;
+}
+
+/*
+기본 브레이크포인트
+- 320 
+- 768태블릿
+- 1024 피씨
+*/
+
+
+/*1261 피시 사이즈 대응*/
+@media all and (min-width:1261px){
+    header{
+        position: fixed;
+        width:100%;
+        top:0;
+        left:0;
+        background-color: #e70404;;
+
+    }
+    header h1{
+        text-align: center;
+        height:12px;
+        padding:25.5px 0;
+        margin:0;
+        width:10%;
+        background-color: #e70404;
+    }
+    header h1 img{
+        width:88px;
+        height:auto;
+    }
+    header .all_btn{
+        display: none;
+    }
+    
+    header .pc_srch{
+        display: block;
+        background-color: #333;
+        height:13px;
+        padding:25px;
+        position: absolute;
+        top:0;
+        right:65px;
+    }
+    header .my_btn{
+        height:17px;
+    }
+    
+    .main_bn{
+        padding-top:63px;
+    }
+    
+    nav{
+        position: absolute;
+        top:0;
+        left:10%; !important;
+        width:calc(90% - 130px);
+        background-color:unset;
+        border-bottom: 1px solid #e70404;
+    }
+    nav ul li{
+        text-align: center;
+        width:calc(100% / 8);
+        float:left;
+        padding:0;
+    }
+    nav ul li a{
+        padding:22.5px 0;
+        display: block;
+        border-left: 1px solid #444;
+        
+        
+    }
+    nav .close{
+        display: none;
+    }
+    nav .srch{
+        display: none;
+        position: absolute;
+        top:63px;
+        right:-65px;
+        width: 365px;
+        height:32px;
+        background: #000;
+        padding:15px 10px;
+    }
+    nav .srch button{
+        display: none;
+    }
+    nav .srch input{
+        float:unset;
+        width:335px;
+        height:32px;
+        background-color: unset;
+        border-bottom: 1px solid #444;
+    }
+    nav ul{}
+    nav ul li{}
+    footer .f1{
+        position: relative;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    footer .f1_in:after{
+        content:'';
+        clear: both;
+        display: block;
+    }
+    footer .f1 .f_sns{
+        position: absolute;
+        top:0;
+        right:0;
+        padding-top:0;
+        margin-top: 0;
+    }
+    
+    .f_sns li a{
+        width:60px;
+        height:60px;
+    }
+    
+    .fs1 a{
+        background-image: url(../images/fSnsIcon1.gif);
+    }
+    .fs2 a{
+        background-image: url(../images/fSnsIcon2.gif);
+    }
+    .fs3 a{
+        background-image: url(../images/fSnsIcon3.gif);
+    }
+    .fs4 a{
+        background-image: url(../images/fSnsIcon4.gif);
+    }
+    .fs5 a{
+        background-image: url(../images/fSnsIcon5.gif);
+    }
+    
+    .fs1:hover a{
+        background-image: url(../images/fSnsIcon1_on.gif);
+    }
+    .fs2:hover a{
+        background-image: url(../images/fSnsIcon2_on.gif);
+    }
+    .fs3:hover a{
+        background-image: url(../images/fSnsIcon3_on.gif);
+    }
+    .fs4:hover a{
+        background-image: url(../images/fSnsIcon4_on.gif);
+    }
+    .fs5:hover a{
+        background-image: url(../images/fSnsIcon5_on.gif);
+}/*1261*/
+
+@media all and (min-width:768px){
+    .main_bn .s1_m{
+        display: none;
+    }
+    .main_bn .s1_pc{
+        display: block;
+    }
+    footer .f1 .f1_in ul{
+        float:left;
+    }
+    footer .f1 .f1_in .f_menu2{
+        padding-top: 0;
+    }
+    footer .f_sns{
+        padding-top: 20px;
+    }
+}/*768*/
+
+@media all and (min-width:960px){
+    .con .box{
+        width:33.33%;
+    }
+}/*960*/
+
+
+
+
+
+
+
+
+
+
+

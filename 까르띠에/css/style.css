@@ -1,0 +1,176 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+*{
+    margin:0;
+    padding:0;
+
+}
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+#wrap{
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    width:100%;
+    height:100%;
+    background-position: center bottom;
+}
+h1{
+    position:absolute;
+    width:300px;
+    top:240px;
+    left:0;
+    text-align: center;
+}
+
+h1 strong{
+    font-size: 16px;
+    font-family: verdana;
+    color:#333;
+    display: block;
+}
+
+h1 img{
+    width:200px;
+    height:auto;
+}
+h1 span{
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: arial;
+    color:#444;
+    letter-spacing: 5px;
+    
+}
+.txt{
+    position: absolute;
+    top:400px;
+    left:40px;
+    font-size: 30px;
+    color:#111;
+    font-family: 'Raleway'
+}
+
+.txt span{
+    color: #888;
+    
+}
+#sns{
+    position: fixed;
+    top:30px;
+    right:50px;
+}
+#sns li{
+    float:left;
+    margin-left: 30px;
+    font-size: 22px;
+    color: #555;
+}
+
+section{
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    right:0;
+}
+section article{
+    width:12%;
+    height:100%;
+    float:right;
+    background-image: url(../images/divider.png);
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    position: relative;
+    overflow: hidden;
+}
+section article h2{
+    position: absolute;
+    top:300px;
+    left:20px;
+    color:#666;
+    font-size: 20px;
+    font-family: 'Raleway';
+    border-left: 3px solid #666;
+    padding:0 15px;
+    z-index: 2;
+}
+section article div{
+    position: absolute;
+    left:0;
+    top:300px;
+    height:0px;
+    width:100%;
+    background-color: rgba(0,0,0,0.5);
+    transition: all 0.5s;
+}
+
+article video{
+    position: absolute;
+    width:auto;
+    height:100%;
+    margin-left: -100px;
+    opacity: 0;
+}
+
+article h3{
+    position: absolute;
+    bottom: 210px;
+    right:-310px;
+    font-size: 40px;
+    font-family: 'Raleway';
+    color:#fff;
+    text-align: right;
+    width:300px;
+}
+
+article p{
+    position: absolute;
+    bottom: 50px;
+    right: -310px;
+    width:300px;
+    height:150px;
+    font-size: 12px;
+    font-family: arial;
+    color: #fff;
+    text-align: right;
+    opacity: 0.8;
+}
+article:hover h2{
+    color:#ccc;
+    border-color:#ccc;
+}
+
+article:hover div{
+    height:70px;
+    top:270px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

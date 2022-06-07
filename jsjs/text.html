@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <title>텍스트 html</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            border:silver outset 4px;
+            background-color: #000;
+            height:42px;
+            line-height: 42px;
+            text-align: center;
+            color:lawngreen;
+            font-size: 18px;
+            margin:40px auto;
+            width:180px;
+        }
+    
+    </style>
+    </head>
+    <body>
+        <div class="box box1">안녕하세요</div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4">
+        <h3>h3태그</h3>
+        </div>
+        <div class="box box5"></div>
+        <div class="box box6"></div>
+        
+        
+        
+        
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        /*
+        $(선택자).text(텍스트);
+        텍스트를 삽입하는 기능
+        이미 텍스트를 가지고 있는 태그 내부에 집어넣을 경우,태그내부의 것들이 다 비워지고 텍스트만 들어가짐
+        
+        var 변수이름 = $(선택자).text()
+        ->해당 선택자 내부에 있는 text를 구해서 변수에 저장
+        */
+    $('.box2').text('하이');
+    $('.box1').text('수정')
+        
+    var a=$('.box2').text();
+    $('.box3').text(a);
+   //html은 text와 사용방법이 완전히 똑같다
+        
+    $('.box4').html('<h2>h2 태그</h2>')
+        
+    var b=$('.box4').html();
+        $('.box5').html(b);
+        
+        
+    </script>
+    </body>
+</html>

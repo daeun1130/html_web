@@ -1,0 +1,102 @@
+<!doctype html>
+ <html>
+<head>
+    <title>배열</title>
+    
+    
+    
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            margin: 40px auto;
+            border:2px solid #000;
+        }
+    
+    
+    
+    
+    </style>
+    </head>
+     
+     
+     
+    <body>
+        
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        
+        
+        
+    <script>
+        
+    /*
+    자바스클립트에서 순서는 인덱스라고 한다
+    무조건 0부터 시작을 한다.
+    (),{},
+    []순서와 관계된 모든 것들
+    */
+        
+    var a = ['개나리','장미','안개꽃','봉숭아','해당화'];
+//        document.write(a[3]);
+        
+        for (var i=0; i<5; i++){
+            document.write(i+1+'.'+a[i]+'<br>');
+        }
+        
+        
+        //length 개수
+        
+    var b =['쏟아진다','목요일밤','으으','YOUTH','날이좋아서','그정도쯤이야','랄랄'];
+        
+        for (var i=0; i<b.length; i++){
+            document.write(i+1+'.'+b[i]+'<br>')
+        }
+        
+        var bg = ['#000000','#333333','#666666','#999999','#bbbbbb','#eeeeee'];
+        
+        var box=document.getElementsByClassName('box');//자바스크립트로 클래스 box라는 요소를 선택함
+        
+        for(var i = 0; i<6; i++){
+            box[i].style.backgroundColor= bg[i];
+        }
+        
+        
+     /*
+     배열데이터는 하나의 변수안에 여러개의 데이터를 저장하는 방법
+     관련없는 것들을 한 배열안에 저장해서는 안된다. 
+     ex
+     var 중국집=['짜장면','탕수육','짬뽕','슈크림X']
+     
+     하나의 배열데이터안에는 여러형태의 데이터가 같이 공존할 수 있다.
+     ex
+     var a = ['aaa',true,323,false,'bbb']
+     
+     */   
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </script>
+    </body>
+</html>

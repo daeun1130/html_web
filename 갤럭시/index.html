@@ -1,0 +1,102 @@
+<!doctyle html>
+<html lang="ko">
+<head>
+    <title></title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css"
+      type="text/css">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        
+        
+        
+    $(document).ready(function(){
+        
+        var onOff=false;
+        
+        $('.all_btn').on('click',function(){
+           
+            onOff=!onOff
+            
+            if(onOff==true){
+            
+            $('aside').animate({'left':0});
+            $('.container').animate({'left':253})
+            }else{
+                $('aside').animate({'left':-253});
+            $('.container').animate({'left':0})
+            }
+                
+           })
+        
+    })//오프닝구문
+    </script>
+    </head>
+    <body>
+    <div id="wrap">
+        <div class="container">
+        <header>
+        <h1><a href="#"><img src="images/logo.png"></a></h1>
+        <button class="all_btn">
+        <span></span>    
+        <span></span>    
+        <span></span>    
+        </button><!--all_btn-->
+            
+        <button class="rsv">
+        실시간예약    
+        </button><!--rsv 예약버튼-->
+            
+        <ul class="util">
+        <li><a href="#">로그인</a></li>    
+        <li><a href="#">회원가입</a></li>    
+        <li><a href="#">비회원 예약확인</a></li>    
+        </ul><!--util-->
+            
+        <nav>
+            
+        <ul class="gnb">
+        <li><a href="#">실시간 예약</a></li>    
+        <li><a href="#">갤럭시 서비스</a></li>    
+        <li><a href="#">대여가이드</a></li>    
+        <li><a href="#">커뮤니티</a></li>    
+        <li><a href="#">이벤트</a></li>    
+        </ul>
+            
+        </nav>
+            
+            
+        <p class="tel">(064)744-1116</p>
+            
+        </header>
+        </div><!--contaner
+aside를 제외한 나머지 본문을 다 묶어주는 역할
+나중에aside가 앞으로 밀릴때 container가 같이 밀려남
+-->
+        <aside>
+        <ul class="sub_util">
+        <li class="su1"><a href="#">로그인</a></li>    
+        <li class="su2"><a href="#">회원가입</a></li>    
+        <li class="su3"><a href="#">비회원 예약확인</a></li>    
+        </ul>
+            
+        <ul class="sub_gnb">
+        <li><a href="#">실시간 예약</a></li>    
+        <li><a href="#">대여가이드</a></li>    
+        <li><a href="#">커뮤니티</a>
+        <ul class="sub">
+        <li><a href="#">이용후기</a></li>    
+        <li><a href="#">Q&A</a></li>    
+        <li><a href="#">공지사항</a></li>    
+        </ul> <!--sub-->  
+        </li>    
+        <li><a href="#">이벤트</a></li>    
+        </ul>
+        </aside>
+        
+    </div><!--#wrap-->
+    
+    </body>
+</html>

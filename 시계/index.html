@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>시계</title>
+    <link rel="stylesheet"
+          href="css/style.css">
+</head>
+    <body>
+    <div id="wrap">
+        <div class="top">
+        <span class="lte">LTE</span>
+        <span class="on">SKT</span>
+        <span class="num">98%</span>
+        <span class="co">오후6시01분</span>
+        <img src="imgaes/battery.png">
+        </div>
+        <div class="main">
+        <img src="imgaes/djin.jpg">
+        <p>
+        <span id="hr">00</span> :
+        <span id="min">00</span> :
+        <span id="sec">00</span>
+        </p>
+        </div><!--main-->
+        
+        <div class="img">
+        <img src="imgaes/cat.png">
+        </div>
+        
+    </div><!--wrap-->
+    
+    <script>
+        
+          function clock(){
+        var now=new Date();
+        
+        var hr = now.getHours();
+        var min = now.getMinutes();
+        var sec = now.getSeconds();
+              
+        if
+        
+        
+    if(hr>12){
+        hr-=12;
+    }else if(hr==0){
+        hr=12;
+    }
+        
+        if(hr<10){
+          hr='0'+hr;
+        }
+        if(min<10){
+            min='0'+min;
+        }
+         if(sec<10){
+            sec='0'+sec;
+        }
+              
+document.getElementById('hr').innerHTML=hr;
+        
+document.getElementById('min').innerHTML=min;
+        
+document.getElementById('sec').innerHTML=sec;
+}
+        
+clock();
+setInterval(function(){
+    clock();
+    
+    
+       
+},500);
+//        
+//    var now=new Date();
+//        document.write(now);
+//        
+//    var mon=now.getMonth();//월
+//    var dt=now.getDate();//일
+//    var day=now.getDay();//요일
+//    var year=now.getYear();//년
+//        
+//    var ddd=['일','월','화','수','목','금','토']
+//        
+//    document.write('<br>'+(year+1900)+'년'+(mon+1)+'월'+dt+'일'+ddd[day]+'요일<br>');
+//        
+//    var hr=now.getHours();//시
+//    var min=now.getMinutes();//분
+//    var sec=now.getSeconds();//초
+//    
+        
+        
+    
+//    document.write(hr+':'+min+':'+sec);
+        
+
+        
+        
+        
+        
+        
+
+        
+    </script>
+    
+    
+    
+    
+    
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+    <title>onoff</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            border:2px solid #000;
+            margin:40px auto;
+        }
+        .space{
+            width:200px;
+            height:200px;
+            border-radius: 50%;
+            border:4px solid #000;
+            margin:40px auto;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        <div class="space"></div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+        
+        <script>
+            
+            var onOff=false;
+            
+        $('.box').on('click',function(){
+            
+            onOff = !onOff
+            if(onOff==true){
+           $(this).css({
+               'backgroundColor':'gold'
+           });
+        }else{
+            $(this).css({
+                'backgroundColor':''
+            })
+        }
+            
+            
+        })
+            
+        
+        var Off=false;
+            
+            
+        $('.space').on('click',function(){
+            Off=!Off;
+            if(Off==true){
+            
+            $(this).css({
+                'backgroundColor':'red'
+            });
+                
+            }else{
+                $(this).css({
+                    'backgroundColor':''
+                })
+            }
+            
+        });
+            
+            
+            
+            
+            
+            
+        </script>
+    </body>
+</html>

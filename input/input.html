@@ -1,0 +1,122 @@
+<!doctype html>
+<head>
+<title>인풋태그</title>
+</head>
+
+<body>
+
+<select>
+<option value="op1">빨간색</option>    
+<option>옵션2</option>    
+<option>옵션3</option>    
+<option>옵션4</option>    
+<option>옵션5</option>    
+</select>
+
+<form action="join.pnp" method="post" autocomplete="off">
+<!--인풋태그나 셀렉트처럼 사용자에게 입력받는 창들을 모아놓는 태그
+action:인풋창으로 입력받은 내용물들을 처리할 서버의 프로그램을 지정하는 속성
+
+method:(서버의 파일을 전송해서 처리하는 형태)
+
+get:입력받은 값이 주소표시줄에 다 노출 되는 형태(입력길이에 제한이 있다 256byte~4096byte)
+
+post:입력받은값을 표준 입력으로 넘겨주기 때문에 입력 내용의 길이에 제한이 없고 사용자가 입력한 내용이 겉으로 전혀 드러나지 않음
+
+autocomplete:자동완성 옵션 on/off
+-->    
+    
+<input type="text" placeholder="아이디" name="id">
+    <!--인풋태그에 다는 name이라고 하는 요소
+같은 인풋끼리 name로 묶어주면 같은 것으로 인식되 처리됨
+-->
+    
+    <br>
+    <input type="password" placeholder="비밀번호">
+    
+    <label>
+    아이디
+    <input type="text">
+    </label>
+    
+    <label for ="user">아이디</label>
+    
+    <input type="text" id="user">
+    
+    <fieldset>
+    <legend>버튼</legend>
+    <input type="radio">
+        <!--라디오버튼
+토글이 불가능(껐다켰다가 안됨)
+다자택일(ul/ux적 의미)
+ex)미혼/기혼
+ex)외국인/내국인
+ex)여성/남성
+-->
+    <input type="checkbox">
+        <!--체크버튼
+다중선택
+취미/ 가입경로 / 관심분야....
+토글이 가능
+동의여부
+-->
+    
+    <input type="button" value="버튼">
+        
+        <button>버튼!</button>
+        <!--button은
+input대신 그냥 button태그를 훨씬 많이 이용한다
+1. 시맨틱적 의미로 버튼을 의미하기 때문에
+2. submit(서버로 값을 전송하는 역할)까지 담당하기 때문에
+3. a태그나 기타 태그를 넣어 구조를 짤 수 있기 때문에
+-->
+        
+        
+    </fieldset><!--폼 내부에서 단락구분을 하기 위해 쓰는 태그-->
+    
+    <fieldset>
+    <legend>NUMBER</legend>
+    <input type="number" value="2"
+    max="30" step="2">
+        <input type="range">
+        
+        <input type="color" value="#ff0066">
+        
+    </fieldset>
+    
+    <fieldset>
+    <legend>날짜</legend>
+    <input type="date" value=2018-11-30>
+    <input type="time" value="23:00">
+        
+    <input type="datetime-local" value="2018-11-04T23:04">
+    <!--html5.1버전
+때문에 구버전 익스플로러에서 안뜰 가능성 높음-->
+        
+    </fieldset>
+   
+    <fieldset>
+    <legend>
+        text관련 속성
+    </legend>
+    
+    <input type="text" value="경제학부" readonl><!--읽기전용-->
+     <input type="text" required autofocus>
+<!--readonly
+required 필수입력창 만들기
+autofocus 자동활성화
+-->
+    </fieldset>
+   
+    <input type="reset">
+    <!--초기화버튼-->
+    
+    <input type="file">
+    
+</form>
+
+
+
+
+
+</body>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    </head>
+    <body>
+        
+        <pre>
+        문자등 기타형태의 데이터들을 숫자로 변환하는 기능 
+        
+        1.Number()
+        소수점자리까지 다 변환
+        뒤에 텍스트가 붙어있으면 NaN이 뜸
+        
+        2.parseInt()
+        텍스트는 제거하고 정수만 변환 정수만 변환함(소수점 안됨)
+        
+        
+        </pre>
+        
+        
+        <script>
+        var f = 256.477;
+            console.log(typeof(f));
+            f = String(f);
+            console.log(typeof(f));
+            
+            
+        var a1=prompt('숫자 1번째');
+        var a2=prompt('숫자 2번째');
+        var a3=prompt('숫자 3번째');
+        var a4=prompt('숫자 4번째');
+        
+       var result= a1+a2+a3+a4;
+            if(result == 5678){
+                document.write('당첨되셨습니다')
+            }
+            
+        </script>
+        
+        
+    <script>
+//        var a = '123';
+//        //typeof()데이터형을 검사
+//        //Nuber() 문자형데이터를 숫자로 바꿔줌
+//        a = Number(a);
+//        console.log(typeof(a));
+//        console.log(a);
+//        
+//        var b = '123.456';
+//        
+//        b = Number(b);
+//        
+//        console.log(typeof(b));
+//        console.log(b);
+//        
+        
+        
+//    var c=prompt('지금은 몇월입니까');
+//        c=Number(c);
+//        console.log(typeof(c));
+//        console.log(c);
+//        document.write(c);
+        
+        var d =console.log('당신의 키는?');
+            d = parseInt(d);
+        
+        /*
+        텍스트 뒤의 문자까지 제거하고 숫자파트만 숫자형태로 형을 변환해줌
+        소수점자리이하까지 다 삭제를 하기때문에 소수점묘사가 필요한 숫자정보를 변환하기에는 적절치 못함
+        소수점 안됨
+        */
+            document.write(d);
+            console.log(typeof(d));
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </script>
+    
+    </body>
+</html>

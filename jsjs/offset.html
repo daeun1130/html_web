@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <title>offset</title>
+    <style>
+        body{
+            height:4000px;
+        }
+        .box{
+            width:200px;
+            height:200px;
+            background-color: #ccc;
+            position: absolute;
+            top:1600px;
+            right:200px;
+        }
+        
+        /*offset()문서의 끝에서부터 해당 요소가 있는 곳의 위치까지의 거리*/
+    
+    </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        
+        
+    <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+        
+        var a=$('.box').offset().left;
+            console.log(a);
+        var b=$('.box').offset().top;
+            console.log(a,b);
+        
+        </script>
+    
+    </body>
+</html>

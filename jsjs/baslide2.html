@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <title>bxslider2</title>
+    
+    <style>
+        .box{
+            width:250px;
+            height:400px;
+            border:2px solid #000;
+            font-weight: bold;
+            line-height: 400px;
+            text-align: center;
+            font-size: 30px;
+        }
+    
+    </style>
+    </head>
+    <body>
+    <div class="wrap">   
+    <div class="box"></div>    
+    <div class="box">box2</div>    
+    <div class="box">box3</div>    
+    <div class="box">box4</div>    
+    <div class="box">box5</div>    
+    <div class="box">box6</div>    
+    <div class="box">box7</div>    
+    <div class="box">box8</div>    
+    <div class="box">box9</div>    
+    </div><!--wrap-->
+        
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery.bxslider.js">
+        </script>
+        
+        <script>
+        $('.wrap').bxSlider({
+            'slideWidth':250,
+            //캐러셀 내부의 슬라이더들 너비값을 지정
+            'minSlides':4,
+            //최소개수
+            'maxSlides':4,
+            //최대개수
+            'moveSlides':1,
+            //한번에 움직일 슬라이더 개수
+            'slideMargin':20,
+            //캐러셀 슬라이더 사이 사이 띄워주기
+            'auto':true,
+            //자동재생
+            'pause':2000,
+            //오토속도조절
+            'autoControls':true,
+            //재생 정지
+            'autoHover':true
+        });
+        </script>
+    </body>
+</html>

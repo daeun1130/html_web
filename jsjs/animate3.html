@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <title>애니메이트3</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            border:2px solid #000;
+            margin:20px auto;
+        }
+        .con{
+            width:800px;
+            height:200px;
+            background-color: gold;
+            display: none;
+        }
+    </style>
+    </head>
+    <body>
+        
+        <button>클릭</button>
+        
+        <div class="con"></div>
+        
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+    <div class="box box4">box4</div>
+        
+    <div class="box box5">box5</div>
+    <div class="box box6">box6</div>
+    <div class="box box7">box7</div>
+    <div class="box box8">box8</div>
+    <div class="box box9">box9</div>
+        
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script>
+        
+        $('.box1').on('click',function(){
+            $(this).fadeOut(3000,function(){
+                $('.box2').animate({'width':400})
+            });
+        });
+            //opcity가 1에서 0으로 감소한 후 0이 되는 순간 display:none
+        
+        $('.box2').on('click',function(){
+            $('.box1').fadeIn(3000);
+            //display이 사라지고 opacity 값이 0->1로 증가
+        });
+        
+    
+        $('.box3').on('click',function(){
+            $('.box4').fadeToggle();
+            //껐다 켰다, 붙였다 뗏다를 반복하는 명령을 toggle
+        })    
+        
+        $('.box5').on('click',function(){
+            $(this).slideUp();
+        });
+        
+        $('.box6').on('click',function(){
+            $('.box5').slideDown();
+        });
+        
+        $('.box7').on('mouseenter',function(){
+           $('.box8').slideUp(); 
+        }).on('mouseleave',function(){
+            $('.box8').slideDown();
+        });
+            
+        $('button').on('click',function(){
+           $('.con').slideDown(); 
+        });
+        
+        
+        
+        
+        </script>
+    </body>
+</html>

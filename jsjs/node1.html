@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+    <title>노드찾기1</title>
+    <style>
+        *{
+            font-size: 14px;
+            color: #333;
+        }
+        div,p,ul,li,h1,h3{
+            margin:10px;
+            padding:10px;
+            border:1px solid #eee;
+        }
+    
+        .select{
+            background-color: #ccc;
+        }
+        
+        span, strong{
+            background-color: #ccc;
+            font-weight: bold;
+        }
+    
+    </style>
+    </head>
+    <body>
+        
+        <div id="wrap">
+        div,#wrap
+        <div class="header">
+        div, .header
+        <h1>h1</h1>
+        <p class="tit">p, .tit</p>
+        </div><!--header-->
+            
+        <div class="section">
+        div, .section
+        <ul class="menu">
+            ul,.menu
+        <li>list1</li>
+        <li>list2</li>
+        <li class="select">list3</li>
+        <li>list4</li>
+        <li>list5</li>
+        </ul><!--menu-->
+            
+        <div class="box">
+            div, .box
+            <p>p1</p>
+            <p>p2<strong>strong</strong></p>
+            <p class="test1">p3
+            <strong>strong</strong>
+            </p>
+        </div><!--box-->
+        </div><!--section-->
+            
+        <div class="content">
+        div, .content    
+            <div class="con">
+            div, .con
+                <h3>h3</h3>
+        <ul class="list">
+<li>list1</li>
+<li class="test2">list2,test2</li>
+<li>list3<span>span</span></li>
+<li>list4</li>
+                </ul>
+            </div>
+            
+    <div class="space">
+    div,space
+        <div class="item">
+        div, .item 1
+        </div>
+        <div class="item">
+        div, .item 2
+        </div>
+        <div class="item">
+        div, .item 3
+        </div>
+    </div>
+            
+            
+        </div><!--content-->
+            
+        <div class="footer">
+        div, .footer  
+            
+        <h1>h1</h1>
+        <ul class="fmenu">
+        ul, .fmenu
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        </ul>
+            
+        <div class="cr">
+        div, .cr
+        <p class="test1">p,.test1</p>
+        <p class="test2">p,.test2</p>
+        </div><!--cr-->
+        </div><!--footer-->
+        </div><!--#wrap-->
+        
+        
+    <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+        
+        //자식노드찾기
+            /*
+            제이쿼리의 특징:
+            체인메서드
+            선택자를 잡아둔 뒤, .(접근연산자)을 사용한 다음 바로 원하는 매서드를 써주면 왼쪽에서 오른쪽으로 차례대로 하나하나씩 실행된다.
+            */
+            /*
+            find()
+            후손을 찾는 기능을 가진 매서드
+            div>p
+            children()
+            바로 밑의 자식만 찾는 기능을 가진 매서드 
+            
+            children('선택자')
+            해당 선택자를 가진 자식을 찾기
+            children()
+            모든 자식을 다 선택
+            */
+        $('.section').find('.select').css({
+            'backgroundColor':'pink'
+        });
+        $('.menu').children('.select').css({
+            'fontWeight':'bold'
+        });
+            
+        $('.box').children().css({
+            'backgroundColor':'gold'
+        });
+            
+        $('.content').find('h3').css({
+            'backgroundColor':'silver'
+        });
+        $('.content').children().children('h3');
+            
+            //인덱스넘버로 찾기
+            //eq(1)
+$('.fmenu li').eq(1).css({
+    'backgroundColor':'darkviolet'
+});
+            
+$('.box p').eq(1).children('strong').css({
+    'color':'blue'
+});
+            
+$('.section').find('li').eq(4).css({
+    'borderColor':'#000'
+});        
+            
+
+            
+            
+            
+            
+            
+        </script>
+    </body>
+</html>

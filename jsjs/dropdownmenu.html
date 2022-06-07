@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+    <head>
+<title>드롭다운메뉴</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul:not(.sub){
+            list-style: none;
+            height:50px;
+            background-color: black;
+            text-align: center;
+        }
+        .l1{display: inline-block;}
+        .l1>a{
+            display: block;
+            line-height: 50px;
+            text-decoration: none;
+            color:#fff;
+            width:80px;
+        }
+        .sub{
+            list-style: none;
+            width:80px;
+            background-color:#333;
+            position: absolute;
+            display: none;
+        }
+        .sub a{
+            color:#fff;
+            text-decoration: none;
+            line-height: 30px;
+        }
+        
+        .u2{
+            margin-top: 400px;
+        }
+        .l2{
+            display: inline-block;
+        }
+        
+        .l2 .sub{
+            display: block;
+            transition: all 0.8s;
+        /*transition이 적용되지 않는 것
+            모든 auto라는 속성값
+            display:none/block
+            (애니메이션도x)
+            background-size
+            */
+            height:0;
+            overflow: hidden;
+        }
+        .l2:hover .sub{
+            height:120px;
+        }
+        
+        .l2>a{
+            display: block;
+            line-height: 50px;
+            text-decoration: none;
+            color:#fff;
+            width:80px;
+        }
+        
+    </style>
+    </head>
+    <body>
+    <ul>
+    <li class="l1">
+    <a href="#">메뉴1</a>
+    <ul class="sub">
+    <li><a href="#">서브1</a></li>    
+    <li><a href="#">서브2</a></li>    
+    <li><a href="#">서브3</a></li>    
+    <li><a href="#">서브4</a></li>    
+    </ul>
+    </li><!--l1--> 
+        
+    <li class="l1">
+    <a href="#">메뉴2</a>
+    <ul class="sub">
+    <li><a href="#">서브1</a></li>    
+    <li><a href="#">서브2</a></li>    
+    <li><a href="#">서브3</a></li>    
+    <li><a href="#">서브4</a></li>    
+    </ul>
+    </li><!--l1-->    
+    </ul>
+        
+    <ul class="u2">
+    <li class="l2">
+    <a href="#">메뉴1</a>
+    <ul class="sub">
+    <li><a href="#">서브1</a></li>    
+    <li><a href="#">서브2</a></li>    
+    <li><a href="#">서브3</a></li>    
+    <li><a href="#">서브4</a></li>    
+    </ul>
+    </li><!--l1--> 
+        
+    <li class="l2">
+    <a href="#">메뉴2</a>
+    <ul class="sub">
+    <li><a href="#">서브1</a></li>    
+    <li><a href="#">서브2</a></li>    
+    <li><a href="#">서브3</a></li>    
+    <li><a href="#">서브4</a></li>    
+    </ul>
+    </li><!--l1-->    
+    </ul>
+    <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+    $('.l1').on('mouseover',function(){
+       $(this).find('.sub').stop().slideDown(800)
+    }).on('mouseout',function(){
+        $(this).find('.sub').stop().slideUp(800)
+    })
+        
+        
+        </script>
+    </body>
+</html>

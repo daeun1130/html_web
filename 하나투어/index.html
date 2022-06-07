@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>하나투어</title>    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+    <body>
+    <div id="wrap">
+        <div class="popup">
+        <p class="txt">
+        매일매일 모바일 특가<br>
+        하나투어앱
+        </p>
+            
+        <a href="#" class="btn" title="테스트">
+            <img src="images/top_appdown.png">
+        </a>
+            
+            <a href="#" class="close">
+            <img src="images/top_close.png" alt="닫기">
+            </a>
+            
+        </div><!--popup-->
+        
+        
+        <header>
+        <h1 id="logo">
+        <a href="#">
+        <img src="images/logo.png" alt="하나투어">    
+        </a>    
+        </h1><!--logo-->
+            
+        <a href="#"></a>
+            
+        <button class="all_btn">
+        <span></span>    
+        <span></span>    
+        <span></span>    
+        <span></span>    
+        </button>   
+            
+        <button class="srch">
+        검색버튼영역    
+        </button>    
+            
+        <button class="mybtn">
+        마이메뉴버튼    
+        </button>
+            
+            
+            
+        </header>
+        
+        <nav>
+        
+            <h2 class="soundonly">
+            전체메뉴영역
+            </h2><!--soundonly보이지않음처리-->
+            
+            <ul class="gnb">
+                
+            <li class="on"><a href="#">홈</a></li>
+            <li><a href="#">패키지</a></li>
+            <li><a href="#">항공</a></li>
+            <li><a href="#">호텔</a></li>
+            <li><a href="#">테마</a></li>
+            <li><a href="#">국내여행</a></li>
+            
+            </ul><!--상단메뉴-->
+            
+            <button class="btn">
+            <img src="images/btn_head_nav.png" alt="하단메뉴확장버튼">
+            </button><!--하단메뉴-->
+            
+            
+            <ul class="allmenu" >
+            <li class="on"><a href="#">홈</a></li>
+            <li><a href="#">패키지</a></li>
+            <li><a href="#">항공</a></li>
+            <li><a href="#">호텔</a></li>
+            <li><a href="#">테마</a></li>
+            <li><a href="#">국내여행</a></li>
+            <li><a href="#">여행정보</a></li>
+            <li><a href="#">슈퍼세이브</a></li>
+            <li><a href="#">추천기획전</a></li>
+            </ul>
+            
+            <script src="js/jquery-3.3.1.min.js"></script>
+                
+            <script>
+                
+                var onOff=false;
+                
+            $('nav .btn').on('click',function(){
+                onOff=!onOff;
+                if(onOff==true){
+                $('.allmenu').show()
+                $('nav .btn img').css({'transform':'rotate(180deg)'});
+                }else{
+                    $('.allmenu').hide();
+                $('nav .btn img').css({
+                    'transform':'rotate(0deg)'
+            });
+                }
+            });
+                
+                
+            $('.popup .close').on('click',function(){
+                $(this).parent().slideUp();
+            })
+            
+            </script>
+        </nav>
+        
+        
+        <div class="main_bn">
+        <div class="simg">
+            <a href="#">
+           <img src="images/mv1.jpg" alt="슈퍼세이브">
+            </a>
+            </div><!--simg-->
+            
+        <div class="pager">
+        <span>1</span>/<span>8</span>    
+        </div><!--pager-->
+            
+        </div><!--main_bn-->
+        
+        
+        
+        <section class="quick">
+        <ul>
+            
+            <li class="a1"><a href="#">패키지</a></li>    
+        <li class="a2"><a href="#">항공</a></li>    
+        <li class="a3"><a href="#">호텔</a></li>    
+        <li class="a4"><a href="#">에어텔</a></li>    
+        <li class="a5"><a href="#">허니문</a></li>    
+        <li class="a6"><a href="#">골프</a></li>    
+        <li class="a7"><a href="#">입장권</a></li>    
+        <li class="a8"><a href="#">교통패스</a></li>    
+        <li class="a9"><a href="#">여행정보</a></li>    
+        <li class="a10"><a href="#">면세점 혜택</a></li>    
+        <li class="a11"><a href="#">공연티켓</a></li>    
+        <li class="a12"><a href="#">전체보기</a></li>    
+            
+        </ul>
+        </section>
+        
+        
+        
+        <section class="sub_bn">
+        <a href="#">
+        <img src="images/ad01.jpg">    
+        </a>
+            
+        <a href="#">
+        <img src="images/ad02.jpg">    
+        </a>
+        </section>
+        
+        <ul class="f_menu">
+            
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">PC버전</a></li>
+        <li><a href="#">TOP</a></li>
+        
+        </ul><!--f_menu-->
+        
+        <footer>
+        <ul class="f_info">
+        <li><a href="#">이용약관</a></li>    
+        <li><a href="#">개인정보처리방침</a></li>    
+        <li><a href="#">여행약관</a></li>    
+        <li><a href="#">사업자정보확인</a></li>    
+        </ul>
+    
+        <address>
+        (주) 하나투어 | 대표자: 김진국 | 사업자등록번호 : 102-81-39440 통신판매업신고번호 : 종로01-1806호 | 개인정보 보호책임자 : 박영학<br>
+
+[03161]서울특별시 종로구 인사동 5길 41 <br>하나투어상담센터 : 1577-1233 | FAX : 02-734-0392
+이메일 : 15771233@hanatour.com | 호스팅 서비스 사업자 : (주) 하나투어 관광사업자 등록번호 : 제1993-000006호 | 영업보증보험 : 22억 1천만원 가입
+
+        </address>
+        
+        <p class="copyright">
+        COPYRIGHT ⓒ HANATOUR SERVICE INC. ALL RIGHT RESERVED
+        </p>
+        
+        
+        
+        </footer><!--f_info-->
+        
+        
+        
+        
+        
+        
+        </div><!--wrap-->
+    </body>
+</html>

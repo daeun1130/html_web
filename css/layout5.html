@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <title>레이아웃5</title>
+    <style>
+        .container{width:940px;
+        margin:0 auto;}
+        
+        .header{height:140px;
+        background-color: red;}
+        
+        .mainBn{height:540px;
+        background-color: blue;}
+        
+        .box{margin-bottom:40px;
+        background-color: #000;
+        margin-top: 40px;}
+        .box:after{
+            content:'';
+            clear:both;
+            display:block;
+        }
+        .abox{width: 450px;
+        height:230px;
+        background-color: yellow;
+        float:left;
+            margin-right:40px;
+       }
+        .box .abox:last-child{margin:0;}
+        
+        .footer{height:100px;
+        background-color:cyan;
+        margin-top:40px;
+        position: relative;}
+        
+        .footerlogo{
+            width: 120px;
+            height: 30px;
+            background-color: #333;
+            position: absolute;
+            top:40px;
+            left: 50%;
+            margin-left: -60px;
+        }
+        
+    
+    </style>
+    </head>
+    <body>
+    <div class="container">
+        <div class="header"></div>
+        <div class="mainBn"></div>
+        
+        <div class="box">
+            
+        <div class="abox"></div>
+        <div class="abox"></div>
+            
+        </div>
+        
+        <div class="footer">
+        <div class="footerlogo"></div>
+        </div>
+        
+        
+        
+        
+        
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+</html>

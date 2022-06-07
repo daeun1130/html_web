@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<title>탭메뉴</title>
+    <style>
+        *{margin:0; padding:0;}
+        ul{ list-style:none;}
+        
+        .container{
+            width:800px;
+            margin:0 auto;
+            background-color:bisque;
+        }
+    
+        ul li{
+            width:160px;
+            height:42px;
+            line-height: 42px;
+            float:left;
+            text-align:center;
+            background-color:powderblue;
+        }
+    
+    
+        ul:after{
+            content:'';
+            clear:both;
+            display:block;
+        }
+    
+        .wrap div{
+            width:100%;
+            height:500px;
+            display:none;
+        }
+    
+        .wrap div:nth-child(1){
+            background-color:lightgray;
+            display: block;
+        }
+        
+        .wrap div:nth-child(2){
+            background-color: lightpink;
+        }
+        
+        .wrap div:nth-child(3){
+            background-color: lightcoral;
+        }
+        
+        .wrap div:nth-child(4){
+            background-color: linen;
+        }
+        
+        .wrap div:nth-child(5){
+            background-color: lemonchiffon;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    
+    
+    
+    </style>
+</head>
+    <body>
+    <div class="container">
+        <ul>
+        <li>MENU1</li>
+        <li>MENU2</li>
+        <li>MENU3</li>
+        <li>MENU4</li>
+        <li>MENU5</li>
+        </ul><!--메뉴리모컨-->
+        
+        <div class="wrap">
+        <div>메뉴1의 내용물</div>
+        <div>메뉴2의 내용물</div>
+        <div>메뉴3의 내용물</div>
+        <div>메뉴4의 내용물</div>
+        <div>메뉴5의 내용물</div>
+        </div><!--내용물-->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </div><!--container-->
+        
+    
+    <script src="js/jquery-3.1.1.min.js">
+        </script><!--반드시 연결 아니면 제이쿼리 못씀-->
+    
+<script>
+        
+        $('ul li').on('click',function(){
+            
+            var i =$(this).index();//클릭한li의 순서구함
+            
+            $('.wrap div').eq(i).show().siblings().hide();
+              //클릭한 li의 순서와 똑같은 번째의 div를 보이게 만듬
+            
+        })
+        
+        
+        
+        
+        
+        
+        
+        
+        </script>    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+    </html>

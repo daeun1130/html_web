@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+    <title>트래스폼</title>
+    
+    <style>
+        .dot{
+            width:80px;
+            height:80px;
+            background-color:gold;
+            float:left;
+            margin:0 10px;
+            border-radius:50%;
+        transition-duration:0.6s;
+        }
+        .dot:hover{
+            width:120px;
+            height:120px;
+            
+        }
+        
+        .container{
+            margin-top:40px;
+        }
+        
+        .container:after{
+            content:'';
+            clear:both;
+            display:block;
+        }
+    
+        .dot2:hover{
+            width:80px;
+            height:80px;
+            transform:scale(1.5);
+            /*
+            transform: scale(배수)
+                       scaleX(),scaleY()->x값과y값을 따로 변경시킬 수 있다
+            */
+        }
+    
+        
+        
+        .box{
+            width:200px;
+            height:200px;
+            background-color: lavender;
+            transition: all 0.6s;
+            
+        }
+        /*transform:rotate()
+        회전을 시킴
+        45도*/
+        .box:hover{
+            transform:rotate(270deg) scale(2.4);
+        }
+        
+        .memo{
+            width:200px;
+            height:200px;
+            background-color:deeppink;
+            float:left;
+            margin:10px;
+        }
+        
+        
+        .space{
+            width:200px;
+            height:200px;
+            background-color:dodgerblue;
+            float:left;
+            margin:10px;
+        }
+        
+        .container .memo:nth-child(4){
+            position: absolute;
+            top:600px;
+            left:20px;
+        }
+        
+        .container .space:nth-child(4){
+            transform:translate(100px,300px);
+            /*transform:translate(x값,y값)
+            -----------------------------
+            transform:tanslateX()
+            transform:tansleteY()
+            */
+        }
+        
+        .container .space:first-child{
+            transform:skew(45deg)
+        }
+        /*
+        skew 기울익 각도로 기울인다
+        */
+        
+    </style>
+    </head>
+    
+    <body>
+    
+        <div class="container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        </div>
+    
+         <div class="container">
+        <div class="dot dot2"></div>
+        <div class="dot dot2"></div>
+        <div class="dot dot2"></div>
+        <div class="dot dot2"></div>
+        </div>
+    
+    <pre>
+    transform관련 속성은 레이아웃에 영향을 끼치지 않은 채 형태만 바꾸는 속성이다
+    
+    transform으로 형태를 바꾸면, 브라우저내부에서 잡히는 위치값과 크기값은 기존의 값과 완전히 똑같지만 출력되는 모양만 바뀐다.
+    
+    </pre>
+    
+    <div class="box"></div>
+    
+    
+    <div class="container">
+        
+        <div class="memo">메모1</div>
+        <div class="memo">메모2</div>
+        <div class="memo">메모3</div>
+        <div class="memo">메모4</div>
+        <div class="memo">메모5</div>
+        <div class="memo">메모6</div>
+        </div>
+    
+    
+        <div class="container">
+        <dic class="space">스페이스1</dic>
+        <div class="space">스페이스2</div>
+        <div class="space">스페이스3</div>
+        <div class="space">스페이스4</div>
+        <div class="space">스페이스5</div>
+        <div class="space">스페이스6</div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+    </body>
+</html>

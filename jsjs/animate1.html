@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <title>애니메이트</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            border:2px solid #000;
+            margin:40px auto;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+        
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+    $('.box1').on('mouseover',function(){
+        $(this).stop().animate({
+            'width':400,
+            'backgroundColor':'red'
+        },1500)
+    }).on('mouseout',function(){
+        $(this).stop().animate({
+            'backgroundColor':'',
+            'width':200
+    //animete앞에 stop을 넣어줘야
+        })
+    });
+    
+    $('.box2').on('click',function(){
+        $(this).animate({
+            'width':400,
+            
+        },function(){
+            $(this).animate({
+                'height':400
+            },function(){
+                $(this).animate({
+                    'backgroundColor':'blue'
+                })
+            })
+        })
+    })
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+    </body>
+</html>

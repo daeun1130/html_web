@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <title>after</title>
+    <style>
+        p{width:150px;
+        height:30px;
+        background:darkviolet;
+        color:#fff;}
+    
+        .container{
+            width:1000px;
+            background:#ccc;
+        }
+
+        .container:after{
+            content:'';
+            clear:both;
+            display: block;
+        }
+        
+        p:before{content:'안녕!';}
+        p:after{content:'야호';
+        }
+        
+        
+        .container .box{
+            width:200px;
+            height:200px;
+            background:#f06;
+        float:left;}
+    
+    </style>
+    </head>
+    <body>
+        <p></p>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        
+        
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

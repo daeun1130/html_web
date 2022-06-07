@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <title>제이쿼리</title>
+    
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            border:2px solid #000;
+            margin:40px auto;
+        }
+    
+    
+    </style>
+    </head>
+    <body>
+        
+    <div class="box"></div>    
+        
+        
+    <script src="js/jquery-3.3.1.min.js">
+    </script>
+        
+   <script>
+       //$()제이쿼리
+       
+       /*
+       제이쿼리 사용방법
+       1.반드시$()대상을 지정
+       2.
+       */
+    $('.box').click(function(){
+        
+        $('.box').css({
+            'backgroundColor':'red'
+        });
+        
+    }); 
+        
+   </script>
+    
+    
+    </body>
+</html>

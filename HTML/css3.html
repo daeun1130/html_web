@@ -1,0 +1,120 @@
+<!doctpe html>
+<html>
+<head>
+    <title>헤더만들기</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+    
+        a{
+            text-decoration:none;
+            color:inherit;
+        }
+        
+        ul,ol{
+            list-style: none;
+        }
+        
+        header{
+            width:1020px;
+            height:185px;
+            border-bottom:2px solid #ba00ff;
+            margin:0 auto;
+            position: relative;
+        }
+        
+        h1{
+         padding-top:40px;
+            font-size:48px;
+        }
+        
+        .gnb:after{
+            content:'';
+            clear: both;
+            display: block;
+        }
+    
+        .gnb{position:absolute;
+        right:0;
+        top:0;}
+        
+        .gnb li{
+            float:left;
+            margin-left:15px;
+            font-size:12px;
+            font-weight:bold;
+        }
+        
+        .gnb li:nth-child(4):before{
+            content'|';
+            margin-right:7px;
+        }
+        
+        .gnb li:nth-child(4){
+            margin-left:7px;
+        }
+    
+        .gnb2:after{
+            content:'';
+            clear: both;
+            display: block;
+        }
+        
+        .gnb2{
+            position:absolute;
+            top:80px;
+            left:183px;
+            
+        }
+        
+        .gnb2 li{
+            float:left;
+            font-size:18px;
+            margin-left:60px;
+            font-weight:bold;
+            
+        }
+    </style>
+    </head>
+    <body>
+    <header>
+        <h1>
+        <a href="#">
+        로고
+        </a>
+        </h1>
+        <div class="gnb">
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">EN</a></li>
+            <li>|</li>
+            <li><a href="#">JP</a></li>
+            </ul>
+        </div>
+        
+        
+        
+        
+        <div class="gnb2">
+        <ul>
+            <li><a href="#">브랜드소개</a></li>
+            <li><a href="#">메뉴</a></li>
+            <li><a href="#">게시판</a></li>
+            <li><a href="#">고객센터</a></li>
+            
+            </ul>
+        
+        
+        </div>
+        
+        </header>
+    
+    
+    
+    
+    
+    </body>
+</html>

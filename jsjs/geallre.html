@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+    <title>갤러리</title>
+    <style>
+        *{margin:0;padding:0;}
+        .con{
+            background-color: #eee;
+            text-align: center;
+            padding:40px 0;
+        }
+        .con .img_box{
+            width:350px;
+            height:200px;
+            border:4px solid #fff;
+            display: inline-block;
+        }
+        .con .img_box img{
+            width:100%;
+            height:100%;
+        }
+        #view{
+            position: fixed;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            background-color: rgba(0,0,0,0.8);
+        }
+        #view figure{
+            width:800px;
+            position: absolute;
+            left:50%;
+            margin-left: -400px;
+            top:50%;
+        }
+        #view figure img{
+            width:100%;
+            height:auto;
+        }
+        #view .close{
+            position: absolute;
+            background: none;
+            border:none;
+            right:40px;
+            top:40px;
+            color:#eee;
+            font-family: arial;
+            font-weight: 900;
+            font-size: 36px;
+        }
+        .view_in{
+            position: fixed;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="con">
+    <div class="img_box">
+    <a href="#">
+    <img src="images/images1.jpg" alt=해변이미지1>    
+    </a>
+    </div>
+        
+    <div class="img_box">
+    <a href="#">
+    <img src="images/images2.jpg" alt=해변이미지2>    
+    </a>
+    </div>
+        
+    <div class="img_box">
+    <a href="#">
+    <img src="images/images.3.jpg" alt=해변이미지3>    
+    </a>
+    </div><!--img_box-->
+            
+        <div id="view">
+            <div class="view_in"></div>
+            <figure></figure>
+            <button class="close">X</button>
+            </div><!--#view-->
+            
+        </div><!--con-->
+        
+        
+    <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+        $('#view').hide();
+        $('.img_box').on('click',function(){
+            $('#view').fadeIn();
+            
+            var img=$(this).find('a').html();
+            $('#view').find('figure').html(img)
+            //누르면img튀어나오게하기
+            
+            var ht=$('#view figure').height();
+            $('#view figure').css({'marginTop':-(ht/2)})
+            
+        })//.img_box
+            $('#view .close').on('click',function(){
+                $('#view').hide();
+            })//close hide
+            
+        $('.view_in').on('click',function(){
+            $('#view').hide();
+        });//view_in아무대나 눌러도 꺼지기
+            
+       
+        </script>
+    </body>
+</html>

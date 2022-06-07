@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+    <title>1207</title>
+    <style>
+        .pager{
+            text-align: center;
+            margin-top: 80px;
+        }
+        .pager li{
+            display: inline-block;
+        }
+        .pager li.on a{
+            background-color: #08f;
+        }
+        .pager li a{
+            display: block;
+            width:20px;
+            height:20px;
+            background-color: pink;
+            border-radius: 50%;
+            text-indent: -9999px;
+        }
+        
+    </style>
+    </head>
+    <body>
+        <ul class="pager">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        </ul>
+       
+        <style>
+            .box{
+                width:400px;
+                height:400px;
+                background-color: #f06;
+            }
+            .box.off{
+               animation:ani1 3s infinite linear;
+            }
+            @keyframes ani1{
+                0%{transform: rotate(0)}
+                100%{transform: rotate(360deg)}
+            }
+        </style>
+        
+        <button>클릭</button>
+        <div class="box"></div>
+        
+        
+        
+        
+        
+        
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $('.pager li').on('click',function(){
+           $(this).addClass('on').siblings().removeClass('on') 
+        });
+        
+        
+        
+        $('button').on('click',function(){
+            $('.box').toggleClass('off')
+        });
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+    <title>class제어</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            border:4px solid #000;
+            margin:40px auto;
+        }
+        .on{background-color: red}
+        
+        .ul1{
+            text-align: center;
+            list-style: none;
+            padding:0;
+        }
+    
+        li{
+            width:20px;
+            height:20px;
+            border-radius: 50%;
+            background-color: pink;
+            display: inline-block;
+        }
+        li.on{
+            background-color: hotpink;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="box"></div>
+     <ul class="ul1">
+    <li></li>    
+    <li></li>    
+    <li></li>    
+    <li></li>    
+    <li></li>    
+    <li></li>    
+    </ul>   
+        
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        
+        $('li').on('click',function(){
+//            $(this).addClass('on').siblings().removeClass('on')
+        $('li').removeClass('on')
+        $(this).addClass('on');
+        });
+        
+        
+        
+        
+//        var onOff=false;
+//        
+//     $('.box').on('click',function(){
+//         
+//         onOff = !onOff
+//         
+//         if(onOff==true){
+//             $(this).addClass('on');
+//         }else{
+//             $(this).removeClass('on')
+//         }
+//         
+//     });   
+        
+        
+        $('.box').on('click',function(){
+           $(this).toggleClass('on') 
+        });
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+    </body>
+    
+</html>

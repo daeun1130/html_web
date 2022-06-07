@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<title>if3</title>    
+</head>
+    
+    <body>
+    <script>
+    /*
+    if(조건문1){
+    조건문이1이 참일때 실행되는 구문
+    }else if(조건문1이 거짓일때 또 다시 검사할 조건문2){
+    조건문2가 참일때 실행되는 구문
+    }.....else{
+    이것도 저것도 다 아닐때 최종적으로 실행될구문(없어도됨)
+    }
+    */    
+        
+//        var weight =prompt('당신의 체중은?');
+//        var height=prompt('당신의 키는?');
+//        var result= (height-100)*0.9;
+//        
+//        if(weight >=result*1.2 ){
+//           document.write('과체중입니다')
+//           }else if(weight <= result*0.8){
+//               document.write('저체충입니다')
+//           }else if(weight <=result*0.9){
+//               document.write('미용체중입니다')
+//           }else{
+//               document.write('정상체중입니다')
+//           }
+//        var b=1;
+//        var a=prompt('지금이 몇 월')
+//        var result;
+//        
+//        var a= 1;
+//        if(a >=9 && a<= 11){
+//          result ='가을입니다';
+//        }else if(a>=6 && a<=8){
+//           result = '여름입니다';
+//        }else if(a>=3 && a<=5){
+//          result = '봄입니다';
+//        }else if(a == 12||a==1||a==2){
+//          result = '겨울입니다';
+//        }
+//        else{
+//          result = '제대로 된 값을 입력해주세요';
+//        }
+//          document.write(result);
+//        alert(result);
+//        
+        
+        var old=prompt('당신의 나이는?');
+        var price = 5000;     
+        
+        
+        if(old<8){
+            document.write('0원 입니다')
+        }else if(old>=60){
+            document.write('2500원입니다')
+        }else{
+            document.write('5000원입니다')
+        }
+        
+        /*
+        if(old<8){
+        price *= 0;
+        }else if(old>=60){
+        price /=2;
+        }else{
+        price=price;
+        }
+        document.write('입장료:')+price
+        
+        */
+        
+        
+    </script>
+    
+    </body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+    <title>애니메이션</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            margin:0 auto;
+            background:turquoise;
+            animation-name:ani1;
+            /*애니메이션 이름을 가장먼저 설정해
+            주어야 하는 이유:외부에서 프레임을 설정해주기 위해*/
+            animation-duration:5s;
+            animation-iteration-count:infinite;
+            animation-direction:alternate;
+        }
+    
+        @keyframes ani1{
+            0%{
+                border-radius:0;
+                background-color:turquoise;
+            }
+            10%{background-color:deeppink;}
+            
+            20%{background-color: hotpink;}
+            
+            30%{background-color: pink;}
+            
+            40%{background-color: lightpink;}
+            
+            50%{background-color: red;}
+            
+            60%{background-color: bisque;}
+            
+                70%{background-color: thistle;}
+                
+                80%{background-color: oldlace;}
+                
+                90%{background-color: azure;}
+            
+            
+            100%{
+                border-radius: 50%;
+            }
+            
+        }
+    
+        .bar{
+            width: 300px;
+            height: 5px;
+            background-color: #ccc;
+                border-radius: 150px;
+        }
+        .bg{
+            width:0px;
+            height:5px;
+            background-color: #1dffff;
+            border-radius:150px;
+            animation-name:ani2;
+            animation-duration:3s;
+            animation-fill-mode:forwards;
+        }
+        @keyframes ani2{
+            0%{width:0}
+            100%{width:100%;}
+        }
+    
+    </style>
+    </head>
+    
+    <body>
+    
+    <div class="box"></div>
+    
+    
+    <div class="bar">
+        
+        <div class="bg"></div>
+        
+        </div>
+    
+    
+    
+    </body>
+</html>

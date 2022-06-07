@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+    <title>공간값</title>
+    <style>
+        .box1{
+            width:200px;
+            height:240px;
+            background-color: powderblue;
+        }
+        .box2{
+            width:152px;
+            height:155px;
+            background-color: lightpink;
+        }
+        .box3{
+            width:252px;
+            height:165px;
+            background-color: lightsalmon;
+        }
+        .box4{
+            width:64px;
+            height:88px;
+            background-color: mediumpurple;
+        }
+        .box5{
+            width:426px;
+            height:135px;
+            background-color: palegoldenrod;
+        }
+        .box6{
+            width:345px;
+            height:198px;
+            background-color: lightsteelblue;
+        }
+        .box7{
+            width:521px;
+            height:345px;
+            background-color: lightyellow;
+        }
+        .box8{
+            width:564px;
+            height:452px;
+            background-color: lightgreen;
+        }
+        .box9{
+            width:687px;
+            height:130px;
+            background-color: olivedrab;
+        }
+        .box10{
+            width:300px;
+            height:300px;
+            background-color: plum;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+    <div class="box9"></div>
+    <div class="box10"></div>
+        
+        
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+        $('.box1').height(600);
+        //height() 높이값이 변함
+        var ht = $('.box1').height();
+            console.log(ht);
+            
+        //width() 너비값을 변화시키거나 너비값을 구해서 저장
+            
+        
+            
+//       $('div').on('click',function(){
+//          var he=$(this).height();
+//          var wi=$(this).width();
+//           
+//        $(this).text('너비:'+wi+'px,높이:'+he+'px')
+//       });
+            
+            for(i=0; i<$('div').length;i++){
+                var w =$('div').eq(i).width();
+                var h =$('div').eq(i).height();
+                
+                $('div').eq(i).text('너비:'+w+'px,높이:'+h+'px')
+            }
+        </script>
+        
+        
+        
+        
+        
+        
+        
+        
+    </body>
+</html>

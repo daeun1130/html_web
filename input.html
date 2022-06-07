@@ -1,0 +1,60 @@
+<!dictype html>
+<html>
+<head>
+    <title>인풋</title>
+    
+    <style>
+        
+        /*
+        input[type=text]
+        []html속성과 속성값으로 선택하기
+        */
+        input[type=text]{color:blueviolet;}
+        input::placeholder{color:limegreen;}
+    
+    
+    
+    
+    
+    
+    
+    </style>
+    </head>
+
+
+
+<body>
+
+<form action="join.php">
+    <!--입려창을 프로그래밍과 연결시키기 위한 커다란 박스-->
+    
+   <select>
+    <option value="item1">항목1</option>
+    <option value="item2">항목2</option>
+       <option value="item3">항목3</option>
+    </select> 
+    
+    <input type="text" placeholder="아이디">
+    <input type="password" placeholder="비밀번호">
+    
+    <pre>
+    input태그는 기본적으로 사용자에게서 값을 입력받기 위한 창이다.
+    
+    input type="button"과 
+    button태그의 차이점
+    
+    button태그의 경우 시맨틱적 의미로 많이 쓰인다. 
+    ex)모바일웹페이지의 닫기버튼, 메뉴버튼 등 의미적으로 버튼으로 쓰여야 할 경우 button태그로 많이 처리된다
+    
+    </pre>
+    
+    <input type="button" value="버튼"
+           onclick="alert('하이')">
+    <button>버튼2</button>
+    
+    
+    </form>
+
+</body>
+    
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <title>text2</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            user-select: none;
+        }
+        body{
+            background-color: dodgerblue;
+        }
+        .box{
+            width:600px;
+            height:400px;
+            border:2px solid #000;
+            background-color: rgba(0,0,0,0.4);
+            font-family: arial;
+            font-size: 80px;
+            line-height: 400px;
+            text-align: center;
+            font-weight: bold;
+            text-transform:uppercase;
+            margin:40px auto;
+            letter-spacing: -6px;
+            
+        }
+        .pager{
+            text-align: center;
+            list-style: none;
+        }
+        .pager li{
+            display: inline-block;
+            height:38px;
+            line-height: 38px;
+            padding:0 4px;
+            border-radius: 5px;
+            margin:0 3px;
+            cursor:pointer;
+            background-color: rgba(255,255,255,0.6);
+        }
+        .pager li.on{
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="box">dodogerblue</div>
+        
+    <ul class="pager">
+    <li>dodgerblue</li>    
+    <li>deeppink</li>    
+    <li>gold</li>    
+    <li>turquoise</li>    
+    <li>orange</li>    
+    <li>darkviolet</li>    
+    <li>lawngreen</li>    
+    <li>tomato</li>    
+    <li>powderblue</li>    
+    </ul>
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+        $('.pager li').on('click',function(){
+           $(this).addClass('on').siblings().removeClass('on') 
+            
+            var txt= $(this).text();
+            $('body').css({
+                'backgroundColor':txt
+            })
+        });
+            $('.box').text(txt);
+     
+        
+        
+        </script>
+    
+    </body>
+</html>

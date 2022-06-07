@@ -1,0 +1,131 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+	<title>슬라이더를 만들어보자</title>
+
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+
+	<!---기본테마연결-->
+
+	<!--제이쿼리파일 
+
+		제이쿼리란?: javascript를 쉽게 쓰게 만들어주는 프로그램/라이브러리 !
+
+		문법을 좀 더 쉽게 만들어주는 느낌~
+
+ 
+
+		대부분의 플러그인은 제이쿼리 기반으로 만들어져 있으므로, 반드시 제이쿼리 파일을 제일 상단에 연결시켜줘야한다.-->
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+
+	<script src="js/jquery.bxslider.js"></script>
+
+	
+
+	<style>
+
+		
+
+		.slide{
+
+			height: 480px;
+
+			line-height: 480px;
+
+			font-size: 84px;
+
+			font-family: arial;
+
+			font-weight: 900;
+
+			text-align: center;
+
+			text-transform: uppercase;
+
+			/*text-transform: uppercase는 대문자 소문자 변경하는 것*/
+
+		}
+
+		
+
+	</style>
+
+	</head>
+
+	<body>
+
+		<div class="container">
+
+			<div class="slide">gold</div>
+
+			<div class="slide">blue</div>
+
+			<div class="slide">deeppink</div>
+
+			<div class="slide">orangered</div>
+
+			<div class="slide">turquoise</div>
+
+			<div class="slide">lawngreen</div>
+
+			</div>
+
+			
+
+	<script>
+
+		//.container 선택->'' 반드시 사용해야한다
+
+		$('.container').bxSlider({
+
+			
+
+			'auto' : true,
+
+			//자동으로 넘어가게 만들기. 옵션값
+
+			
+
+			'pause' : 5000,
+
+			//자동슬라이드 시간 1초=1000
+            
+            
+            'autoHover':true, //마우스 올리면 자동멈춤
+            
+            'mode':'vertical' //슬라이드진행방향
+                              //vertical,fade
+
+		});
+
+		//.은 접근대상자
+
+		
+
+		
+
+		$('.slide').each(function(){
+
+		  var txt = $(this).text() ;
+
+		  $(this).css('backgroundColor', txt);
+
+		});
+
+	
+
+			</script>
+
+		
+
+		
+
+		
+
+	</body>
+
+</html>

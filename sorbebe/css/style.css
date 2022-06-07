@@ -1,0 +1,234 @@
+@charset 'utf-8';
+
+/*reset css*/
+
+*{margin:0;
+padding:0;}
+
+ul, ol{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
+/*header css*/
+
+header{
+    width:100%;
+    border-bottom:1px solid #ccc;
+    height:95px;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:2;
+    /*z-index는 position이랑 세트
+    position값으로 배치하다보면 겹침현상이 일어나는데 이 때 겹쳐진 요소들의 순서를 바꿀 때 사용하는 것이 z-index
+    
+    기본적으로 모든 요소는 z-index값을 1을 가지고 있기 때문에 1을 초과하는 숫자만 써주면 먹힌다*/
+      background-color:#fff;
+}
+.hwrap{
+    width:980px;
+    margin:0 auto;
+    position:relative;
+}
+
+#logo{
+    padding-top:34px;
+}
+
+.util{
+    position:absolute;
+    top:10px;
+    right:0;
+    font-size:12px;
+    color:#898989;
+    font-weight:bold;
+}
+.util li{
+    float:left;
+    margin-left:15px;
+}
+
+.util li:first-child{
+    background-image:url(../images/ico_language.png);
+    background-repeat:no-repeat;
+    padding-left:15px;
+    background-position:0 center;
+}
+
+.util li:first-child:after{
+    content:''
+}
+
+.util li:after{
+    content:'|';
+    margin: 0 7px;
+}
+
+
+.util li:last-child{
+    color:#3badb5;
+}
+
+.util li:last-child:after{
+    content:'';
+}
+
+.util li a{}
+
+.gnb{position:absolute;
+top:45px;
+right:0;}
+.gnb li{
+    float:left;
+    margin-left:50px;
+}
+.gnb li a{
+    height:12px;
+    display:block;
+    background-color:rgba(0,0,0,0.5);
+    background-repeat:no-repeat;
+    background-position:0 -5px;
+    text-indent:-9999px;
+    
+}
+
+.g1 a{
+    width:50px;
+    background-image:url(../images/menu_brand.jpg);
+}
+.g2 a{
+    width:131px;
+    background-image:url(../images/menu_medicaladviser.jpg);
+    
+}
+.g3 a{
+    width:70px;
+    background-image: url(../images/menu_product.jpg);
+}
+.g4 a{
+    width:89px;
+    background-image:url(../images/menu_community.jpg);
+}
+.g5 a{
+    width:81px;
+    background-image:url(../images/menu_customer.jpg);
+}
+
+.gnb li a:hover{
+    background-position:0 -31px;
+}
+
+
+/*슬라이더 영역*/
+.main_bn{
+    position:relative;
+    margin-top:85px;
+}
+.slide{}/*이미지 영역*/
+.slide a{
+    width:100%;
+    height:565px;
+    display:block;
+    background-image:url(../images/main_visual_01.jpg);
+    background-position: center 0;
+    text-indent:-9999px;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+/*버튼 영역: position absolute사용해서 가져다 놓자*/
+.pager{
+    position:absolute;
+    bottom:30px;
+    /*
+    left:50%를 주면
+    부모태그의 50%시점부터 왼->오른쪽으로 배열이 된다.
+    그렇기 때문에 margin-left:-(너비값의 절반값)만큼 강제로 땡겨와야 함
+    */
+    left:50%;
+    margin-left:-57px;
+}
+.pager ul{}
+.pager ul li{
+    float:left;
+    margin:0 4px;
+}
+.pager ul li a{
+    text-indent:-9999px;
+    display:block;
+    border-radius:50%;
+    width:18px;
+    height:18px;
+    background-color:rgba(0,0,0,0.3);
+    
+}
+.container{
+    width:980px;
+    margin:65px auto 0;
+}
+.mainrow1{
+}
+.mainrow1 div{
+    float:left;
+}
+
+
+
+.mainrow2{
+    margin-top:22px;
+}
+
+.mainrow2:after{
+    clear:both;
+    display:block;
+    content:''
+}
+
+.mainrow2 .cols{
+    float:left;
+    margin-right:22px;
+}/*나중에 가로정렬*/
+
+.mainrow2 .cols:last-child{
+    margin-right:0;
+}
+
+.mainrow2 .cols .box{
+    position:relative;
+    margin-bottom:20px;
+}
+
+
+.mainrow2 .cols .box .over{
+    position: absolute;
+    left:0;
+    top:0;
+    opacity:0;
+    transition:all 0.6s;/*지연효과*/
+}
+
+.mainrow2 .cols .box .over:hover{
+    opacity:1;
+}
+
+
+footer{
+    background-color:#32404d;
+   
+}
+.fwrap{
+    width:980px;
+    margin:0 auto;
+    position:relative;
+}
+.fwrap img{}
+.fwrap select{
+  position:absolute;
+    right: 0;
+    top:22px;
+    background-color:#32404b;
+    padding:2px 14px 2px 2px;
+    color:#ccc;
+}

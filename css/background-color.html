@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <title>백그라운드</title>
+    <style>
+        body{height:4000px;
+        }
+        .box{
+            width:100%;
+            height:600px;
+            background-color: skyblue;
+            margin-bottom:40px;
+        }
+        
+        /*background image는 기본적으로 반복하는 속성을 가진다 그래서 background-repeat:no-repeat로 막아줘야한다*/
+        .box1{background-image: url(images/image1.jpg);
+        background-repeat:no-repeat;}
+        .box1 span{display:block;
+            width:50px;
+        height:50px;
+        background-color: rgba(0,0,0,0.4);}
+        .box2{background-image:url(images/bg.jpg);}
+        
+        .box3{background-image:url(images/image2.jpg);
+            background-repeat:no-repeat;
+            background-position:20px 50px;
+            /*
+            백그라운드 포지션은 기본적으로 x값 y값 순으로 쓴다
+            x값은 왼쪽->오른쪽으로 이동하는 정도
+            y값은 위쪽->아래쪽으로 이동하는 정도
+            */
+        }
+        
+        .box4{background-image:url(images/image3.jpg);
+        background-repeat:no-repeat;
+        background-attachment:fixed;}
+        
+        .box5{background-image:url(images/image3.jpg);
+        background-repeat:no-repeat;
+        background-size:300px 500px;
+                        /*x값   y값*/
+        background-size:contain;
+        /*background-size:cover;
+            cover:박스의 너비값과 높이값 중 큰 값에 맞춰 비율에 맞게 백그라운드 사이즈를 키우거나 줄임
+            장점:비율이 깨지지 않는다 / 박스의 여백이 남지 않는다
+            
+            단점:잘리는 이미지가 발생한다
+            
+             background-size:contain
+            박스의 너비값과 높이값중 작은 값에 맞춰서 비율에 맞게 백그라운드 사이즈를 키우거나 줄임
+            
+            장점:비율이 깨지지 않는다/이미지가 잘림없이 모두 출력된다
+            단점:박스의 여백이 남는다*/}
+        .box6{background:#000 url(images/image2.jpg) no-repeat 50px 100px;
+        background-size:cover;
+        /*사이즈는 따로 적어주자*/}
+            
+    </style>
+    </head>
+    <body>
+        
+    <div class="box box1"><span></span></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+    <div class="box box6"></div>
+    </body>
+    
+    
+
+</html>

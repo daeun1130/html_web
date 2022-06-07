@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <title>디스플레이</title>
+    <style>
+        a{width:182px;
+        height:42px;
+        font-size:14px;
+             color:#fff;
+        background-color: #333;
+        text-decoration:none;
+        display:block;
+        text-align:center;
+        font-family:arial;
+        padding-top:14px;
+        border-radius:5px;
+            
+        transition:all 1s;}
+        /*display:block
+        인라인 요소를 블락요소로 바꿔주는 속성
+        인라인 요소는 기본적으로 너비나 높이등 공간값이 들어가지지 않음
+        필요에 따라 블락요소로 전환을 시켜야 하는데 이때 쓰이는 속성 display:block*/
+        a:hover{
+            background-color:black;
+        }
+        .box{width:50px;
+        height:50px;
+        background-color: #00538c;}
+        span{background-color:#ddd;
+        width:18px;
+        height:3px;
+        display:block;
+        margin:2px auto;}
+    
+        .line{width:100%;
+        height:30px;
+        background-color: #ddd;
+            text-align:center;
+            display:none;
+            /*화면상에서 제거하기*/
+        }
+       
+        .line span{width:30px;
+            height:30px;
+            margin-right:15px;
+            background-color: #000;
+            border-radius:50%;
+            display:inline-block;
+            /*태그자체는 블락처럼 너비값 높이값 적용 가능한 블락요소로 바꿔
+            주지만 정렬 방식은 inline정렬 방식을 가진다->레이아웃 짜는데는 될 수 있으면 쓰지 말자*/
+            
+        }
+        
+    </style>
+    </head>
+    <body>
+        
+    <a href="http://naver.com/">NAVER</a>
+       
+    <div class="box">
+        <span></span>
+        <span></span>
+        <span></span>
+    
+        </div><!--box-->
+        
+    <div class="line">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        </div><!--line-->
+    
+    
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <title>포지션</title>
+    <style>
+    
+        .container{width:800px;
+        height:2000px;
+        background-color:#ccc;
+        position:relative;}
+        
+        /*position:absolute는
+        x값 y값 좌표를 이용하여 요소를 이동시키는
+        속성
+        기본적으로는 브라우저를 중심으로 움직이기 때문에 부모태그에게
+        position:relative 적용시켜야만 부모태그 내부에서 부모태그 중심으로 
+        움직인다
+        
+        position:absolute는 레이아웃을 짜는 용도로 써서는 안된다*/
+        .box{width:200px;
+        height:200px;
+        background-color: lawngreen;}
+        
+        .box1{
+            position:absolute;
+            /*지정한 좌표로 움직이게 만드는 속성*/
+            bottom:60px;
+            left:300px;
+        }
+        
+        .box2{
+            position:absolute;
+            top:120px;
+            right:400px;
+            
+        }
+        .box3{
+         position:absolute;
+            top:400px;
+            right:10px;
+        }
+        
+        .box4{position:fixed;
+        top:20px;
+        right:60px;}
+        /*posistion:fixed
+        좌표값으로 움직임,  무조건 브라우저를 기준으로
+        움직임 요소를 브라우저 기준으로 고정시킴*/
+    </style>
+    </head>
+    <body>
+    
+    <div class="container">
+       <div class="box box1">박스1</div> 
+        <div class="box box2">박스2</div>
+        <div class="box box3">박스3</div>
+        <div class="box box4">박스4</div>
+        </div><!--container-->
+    
+    
+    
+    
+    
+    
+    </body>
+</html>

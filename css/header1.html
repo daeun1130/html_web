@@ -1,0 +1,87 @@
+<!doctype hrml>
+<html>
+<head>
+    <title>헤더</title>
+    <style>
+        /*선택자 *은 모든 태그를 한꺼번에 선택
+        */
+        
+        /*reset css*/
+        *{margin: 0; padding:0;}
+        a{
+            color:#000;
+            text-decoration: none;
+        }
+        ul{
+            list-style:none;
+        }
+        header{width:860px;
+        height:160px;
+        background-color:#ccc;
+            margin: 0 auto;
+            position: relative;
+            
+        }
+       /*부모태그와 천장이 맞닿아 있는 자식태그에게 margin-top을 적용시키면
+        부모태그와 자식태그가 함께 움직인다
+        
+        당분간은 이런 상황에서 margin-top이 아닌 padding-top을 주자*/ 
+        h1{margin: 0 auto;
+        text-align:center;
+        padding: 40px;}
+        
+        .util{
+            position:absolute;
+            top:10px;
+            right:0;
+            font-size:12px;
+        }
+        .util li{
+            float:left;
+            margin-left: 30px;
+        }
+        .util li a{}
+    
+        .gnb{text-align:center;}
+        
+        .gnb li{display:inline-block;
+            margin-right: 70px;
+        }
+        
+        .gnb li:last-child{margin-right: 0;}
+    
+        .gnb li a{}
+    </style>
+    </head>
+    <body>
+    
+    <!--<div calss="header"></div>
+<header>시맨틱 태그
+레이아웃을 짜기 위한 용도이나
+상황에 맞는 곳에 쓸 수 있도록 의미를 가진 태그-->
+        <header>
+        <h1 id="logo">
+            <a href="#">로고</a>
+            </h1><!--logo-->
+            
+            <ul class="util">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">장바구니</a></li>
+            <li><a href="#">고객센터</a></li>
+            </ul><!--.util-->
+        
+    <ul class="gnb">
+        <li><a href="#">브랜드소개</a></li>
+        <li><a href="#">메뉴</a></li>
+        <li><a href="#">프랜차이즈</a></li>
+        <li><a href="#">게시판</a></li>
+        
+        </ul>
+    
+        </header>
+    
+    
+    
+    </body>
+</html>

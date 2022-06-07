@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+    <title>탭메뉴</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style:none;
+        }
+        .wrap{
+            width:650px;
+            border:4px solid #000;
+            margin:40px auto;
+            
+        }
+        ul li:hover{
+            background-color: #000;
+            color:#fff;
+            border-color: #fff;
+        }
+        ul li.on{
+            background-color: #1dffff;
+            color:red;
+        }
+        ul li{
+            width:20%;
+            height:40px;
+            line-height: 40px;
+            float:left;
+            text-align: center;
+            border-bottom:1px solid #000;
+        }
+        .inner{}
+        .inner .box{
+            width:100%;
+            height:450px;
+            display: none;
+            color: #fff;
+            font-size: 30px;
+            line-height: 450px;
+            text-align: center;
+        }
+
+        .inner .box:nth-child(1){
+            background-color: #333;
+            display: block;
+        }
+        .inner .box:nth-child(2){
+            background-color: #555;
+        }
+        .inner .box:nth-child(3){
+            background-color: #777;
+        }
+        .inner .box:nth-child(4){
+            background-color: #999;
+        }
+        .inner .box:nth-child(5){
+            background-color: #bbb;
+        }
+        .inner .box:nth-child(6){
+            background-color: #ddd;
+        }
+        ul:after{
+            content: '';
+            clear: both;
+            display: block;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="eiei">짜증나</div>
+    <div class="wrap">
+    <ul>
+    <li class="on">menu1</li>    
+    <li>menu2</li>    
+    <li>menu3</li>    
+    <li>menu4</li>    
+    <li>menu5</li>    
+    <li>menu5</li>    
+    </ul>   
+        <div class="inner">
+    <div class="box">1번박스</div>
+    <div class="box">2번박스</div>
+    <div class="box">3번박스</div>
+    <div class="box">4번박스</div>
+    <div class="box">5번박스</div>
+        </div>
+    </div><!--wrap-->  
+        <div class="iiii">
+            <div class="ddd">
+                <div class="dh282">
+                    <div class="ggg">ㅋㄷㅋㄷ</div>
+                </div><!--1-->
+                
+                <div class="dh282"></div>
+                
+                <div class="dh282"></div>
+                
+                <div class="dh282"></div>
+                
+                <div class="dh282"></div>
+            </div><!--ddd-->
+            <div class="ddd"></div>
+            <div class="ddd"></div>
+            <div class="ddd"></div>
+        </div><!--iiii-->
+        
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        
+    $('li').on('click',function(){
+       $(this).addClass('on').siblings().removeClass('on') 
+        
+        var a=$(this).index();
+        //index()대상의 인덱스 넘버를 구함
+//        $('.box').text(a);
+                        //show()display:none제거
+        $('.box').eq(a).show().siblings().hide();
+    });            //eq()index넘버로 찾기
+        
+        //제이쿼리는 왼쪽에서 오른쪽으로 차근차근 실행되므로 하나의 선택자에 순서대로 명령을 접근시켜 여러개의 명령을 동시에 처리할 수 있다
+       
+       $('.box').on('click',function(){
+          
+           $(this).parents('.wrap').siblings('.iiii').children('.ddd').find('.dh282').eq(0).find('.ggg').text('앟');
+       })
+        
+    </script>
+    
+    </body>
+</html>
